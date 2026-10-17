@@ -33,3 +33,5 @@ One file per architectural decision for CampusMate. **accepted** means the decis
 | [ADR-027](ADR-027-secrets-and-configuration-through-environment-variables.md) | Secrets and configuration through environment variables | proposed |
 | [ADR-028](ADR-028-testing-approach-pytest-angular-test-runner-and-recorded-ai-responses.md) | Testing approach: pytest, Angular test runner and recorded AI responses | proposed |
 | [ADR-029](ADR-029-reports-computed-on-request-with-csv-export.md) | Reports computed on request with CSV export | proposed |
+| [ADR-030](ADR-030-feature-sliced-back-end-with-route-controller-service-layers.md) | Feature-sliced back end with route, controller and service layers | accepted |
+| [ADR-031](ADR-031-feature-sliced-front-end-with-core-shared-and-features.md) | Feature-sliced front end with core, shared and features | accepted |
