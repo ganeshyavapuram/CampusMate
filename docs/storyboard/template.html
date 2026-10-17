@@ -1,0 +1,346 @@
+<title>CampusMate Storyboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a review notebook. Sticky index on the left, one column of story cards; each card reads scene -> analogy -> why -> decide. */
+:root {
+  --bg: #F3F5F8; --surface: #FFFFFF; --ink: #172033; --muted: #566179; --line: #DCE1E9;
+  --accent: #3048C9; --accent-soft: #E8ECFC;
+  --hl-bg: #FFF4C2; --hl-ink: #5C4700;
+  --good: #1B7A4B; --good-soft: #E3F4EA; --warn: #9A5500; --warn-soft: #FDF0DD; --bad: #B42318; --bad-soft: #FCE8E6;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F131B; --surface: #171D29; --ink: #E6E9F0; --muted: #9AA4B8; --line: #2A3344;
+  --accent: #93A5FF; --accent-soft: #232C4A;
+  --hl-bg: #352E12; --hl-ink: #F3DC86;
+  --good: #63CC95; --good-soft: #17301F; --warn: #F2B65C; --warn-soft: #36280F; --bad: #FF8F85; --bad-soft: #3A1A18;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0F131B; --surface: #171D29; --ink: #E6E9F0; --muted: #9AA4B8; --line: #2A3344;
+  --accent: #93A5FF; --accent-soft: #232C4A;
+  --hl-bg: #352E12; --hl-ink: #F3DC86;
+  --good: #63CC95; --good-soft: #17301F; --warn: #F2B65C; --warn-soft: #36280F; --bad: #FF8F85; --bad-soft: #3A1A18;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; display: grid; gap: 32px; }
+@media (min-width: 960px) { .wrap { grid-template-columns: 230px minmax(0, 1fr); padding-inline: 24px; } }
+
+/* Index */
+nav.index { display: none; }
+@media (min-width: 960px) {
+  nav.index { display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 14px; }
+}
+nav.index h4 { font: 700 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 20px 0 8px; }
+nav.index ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+nav.index a { display: block; padding: 5px 8px; border-radius: 6px; color: var(--ink); text-decoration: none; }
+nav.index a:hover { background: var(--accent-soft); }
+
+main { min-width: 0; display: grid; gap: 40px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.05; font-weight: 700; letter-spacing: -.02em; }
+h2 { font-size: clamp(24px, 4vw, 30px); font-weight: 700; letter-spacing: -.01em; }
+h3 { font-size: 20px; font-weight: 500; line-height: 1.25; }
+.kicker { display: block; font: 700 12px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+/* Intro */
+.intro { display: grid; gap: 16px; max-width: 70ch; }
+.intro p { margin: 0; }
+.lede { font-size: 18px; color: var(--muted); }
+.priya { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--hl-bg); color: var(--hl-ink); display: grid; place-items: center; font: 700 24px var(--display); }
+.howto { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.howto div { border-top: 3px solid var(--line); padding-top: 8px; font-size: 15px; }
+.howto b { display: block; font-family: var(--display); font-weight: 500; font-size: 17px; }
+
+/* Progress and filters */
+.toolbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 12px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+.progress { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; font-size: 14px; font-variant-numeric: tabular-nums; }
+.progress strong { font: 700 18px var(--display); }
+.bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; display: flex; }
+.bar span { height: 100%; transition: width .3s; }
+.bar .a { background: var(--good); } .bar .c { background: var(--warn); } .bar .r { background: var(--bad); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.filters button { font: 14px var(--body); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.dbnote { font-size: 14px; color: var(--warn); margin: 0; }
+
+/* Areas and cards */
+.part-head { display: grid; gap: 6px; padding-top: 8px; border-top: 2px solid var(--ink); }
+.part-head p { margin: 0; color: var(--muted); max-width: 65ch; }
+.area { display: grid; gap: 16px; scroll-margin-top: 140px; }
+.area-head { display: grid; gap: 4px; }
+.area-head p { margin: 0; color: var(--muted); }
+.scene-no { font: 500 13px var(--mono); color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 14px; scroll-margin-top: 140px; min-width: 0; }
+.card:target { box-shadow: 0 0 0 3px var(--accent); }
+.card-head { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
+.card-head h3 { flex: 1 1 260px; min-width: 0; }
+.id { font: 500 13px var(--mono); color: var(--accent); }
+.pill, .state { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.pill.accepted { background: var(--accent-soft); color: var(--accent); }
+.pill.proposed { background: var(--warn-soft); color: var(--warn); }
+.state { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.state.approved { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.state.changes { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.state.rejected { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.scene p { margin: 0; font-size: 18px; line-height: 1.5; max-width: 65ch; }
+.pair { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.pair > div { min-width: 0; }
+.pair p { margin: 0; }
+.analogy { background: var(--hl-bg); color: var(--hl-ink); border-radius: 8px; padding: 12px 14px; }
+.analogy .kicker { color: var(--hl-ink); opacity: .8; }
+.why { padding: 12px 0; }
+.formal { margin: 0; font-style: italic; color: var(--muted); font-size: 15px; }
+details { border-top: 1px solid var(--line); padding-top: 10px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+details p, details ul { margin: 8px 0 0; }
+.checks { padding-left: 0; list-style: none; display: grid; gap: 6px; }
+.checks li { padding-left: 26px; position: relative; }
+.checks li::before { content: ""; position: absolute; left: 2px; top: 4px; width: 14px; height: 14px; border: 2px solid var(--muted); border-radius: 3px; }
+.question { background: var(--warn-soft); color: var(--ink); border-radius: 8px; padding: 10px 14px; }
+.question .kicker { color: var(--warn); }
+.question p { margin: 0; font-size: 15px; }
+.tradeoff { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); font-size: 15px; }
+.tradeoff ul { margin: 0; padding-left: 18px; }
+.kicker.good { color: var(--good); } .kicker.bad { color: var(--bad); }
+.related { margin: 0; font-size: 14px; color: var(--muted); }
+.ref { font-family: var(--mono); font-size: 13px; }
+
+/* Review */
+.review { border-top: 1px dashed var(--line); padding-top: 12px; display: grid; gap: 8px; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choices button { font: 700 14px var(--body); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; min-height: 40px; }
+.choices button:hover:not(:disabled) { border-color: var(--ink); }
+.choices button:disabled { opacity: .5; cursor: not-allowed; }
+.choices button[data-d="approved"][aria-pressed="true"] { background: var(--good); border-color: var(--good); color: var(--surface); }
+.choices button[data-d="changes"][aria-pressed="true"] { background: var(--warn); border-color: var(--warn); color: var(--surface); }
+.choices button[data-d="rejected"][aria-pressed="true"] { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.note-label { font-size: 13px; color: var(--muted); }
+textarea { width: 100%; font: 15px/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+.saved { margin: 0; font-size: 13px; color: var(--muted); min-height: 1em; }
+footer { color: var(--muted); font-size: 14px; }
+
+/* Repo status and recommendations */
+.pill.repo { background: var(--bg); color: var(--muted); border: 1px solid var(--line); font-weight: 400; }
+.pill.repo.approved, .pill.repo.accepted { background: var(--good-soft); color: var(--good); border-color: transparent; font-weight: 700; }
+.pill.repo.needs-changes { background: var(--warn-soft); color: var(--warn); border-color: transparent; font-weight: 700; }
+.pill.repo.rejected { background: var(--bad-soft); color: var(--bad); border-color: transparent; font-weight: 700; }
+.pill.repo.proposed { background: var(--warn-soft); color: var(--warn); border-color: transparent; font-weight: 700; }
+.question.resolved { background: var(--good-soft); }
+.question.resolved .kicker { color: var(--good); }
+.rec { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
+.rec .kicker { color: var(--accent); }
+.rec p, .rec ul { margin: 0; font-size: 15px; }
+.rec ul { padding-left: 18px; }
+.rec-why { color: var(--muted); }
+.rec-if { font-weight: 700; }
+.accept { justify-self: start; font: 700 14px var(--body); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--accent); background: var(--surface); color: var(--accent); cursor: pointer; min-height: 40px; }
+.accept[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.accept:disabled { opacity: .5; cursor: not-allowed; }
+.applied { color: var(--good); font-weight: 700; }
+.adr-rec { margin: 0; font-size: 15px; }
+.sync { display: none; font-size: 14px; background: var(--accent-soft); color: var(--ink); border-radius: 8px; padding: 8px 12px; margin: 0; }
+.sync.on { display: block; }
+.sync code { font-family: var(--mono); font-size: 13px; }
+.unsynced { font-size: 12px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+<nav class="index" aria-label="Contents">
+  <h4>Start</h4><ul><li><a href="#how">How to review</a></li></ul>
+  <h4>User stories</h4><ul>{{NAV_US}}</ul>
+  <h4>Decisions (ADRs)</h4><ul>{{NAV_ADR}}</ul>
+</nav>
+
+<main>
+<section class="intro" id="how">
+  <span class="kicker">CampusMate · BCSP-064 · Review copy</span>
+  <h1>CampusMate Storyboard</h1>
+  <p class="lede">Every feature CampusMate will build ({{N_US}} user stories) and every technical choice behind it ({{N_ADR}} decisions), told through one student's week, so you can read each one, see why it matters, and approve it or ask for changes.</p>
+  <div class="priya">
+    <div class="avatar" aria-hidden="true">P</div>
+    <div><span class="kicker">Meet Priya</span><p>Priya is a BCA 6th-semester student at IGNOU. She studies after her part-time job, on her phone and a shared family laptop. Her timetable is in a calendar app, her notes are PDFs on Google Drive, deadlines arrive in a WhatsApp group, and she counts attendance on her fingers. Every story below is a moment in her week.</p></div>
+  </div>
+  <div class="howto">
+    <div><b>1. Read the moment</b>What Priya does, in one or two sentences.</div>
+    <div><b>2. Check the analogy</b>An everyday comparison that shows what the feature or decision is for.</div>
+    <div><b>3. Read why</b>What goes wrong without it, or what you give up by approving.</div>
+    <div><b>4. Decide</b>Approve, ask for changes, or reject, and add a note. Where a story has an open question, accept our recommendation or leave a note with your own answer.</div>
+    <div><b>5. Sync</b>Ask Claude to <i>sync the storyboard</i>. Your decisions and accepted recommendations are written into the story and decision files in the repository, and the "In repo" label updates.</div>
+  </div>
+  <p class="lede" style="font-size:16px">{{N_Q}} stories still have an open question and {{N_PROP}} decisions are new choices that aren't in the synopsis yet. Those need the most attention.</p>
+</section>
+
+<div class="toolbar">
+  <div class="progress"><span><strong id="p-done">0</strong> of {{N_ALL}} reviewed</span><span id="p-a">0 approved</span><span id="p-c">0 need changes</span><span id="p-r">0 rejected</span></div>
+  <div class="bar" aria-hidden="true"><span class="a" id="b-a" style="width:0"></span><span class="c" id="b-c" style="width:0"></span><span class="r" id="b-r" style="width:0"></span></div>
+  <div class="filters" role="group" aria-label="Show">
+    <button type="button" data-f="all" aria-pressed="true">Everything</button>
+    <button type="button" data-f="story" aria-pressed="false">User stories</button>
+    <button type="button" data-f="adr" aria-pressed="false">Decisions</button>
+    <button type="button" data-f="todo" aria-pressed="false">Not reviewed yet</button>
+    <button type="button" data-f="q" aria-pressed="false">Open questions</button>
+    <button type="button" data-f="proposed" aria-pressed="false">New decisions</button>
+  </div>
+  <p class="sync" id="sync" aria-live="polite"></p>
+  <p class="dbnote" id="dbnote" hidden>Decisions can't be saved in this view. Open the page on claude.ai while signed in to record them.</p>
+</div>
+
+<div class="part-head"><span class="kicker">Part one</span><h2>User stories: what Priya can do</h2><p>Each story is a capability CampusMate must have. Approving a story means "yes, build this, and these checks prove it works".</p></div>
+{{US_SECTIONS}}
+
+<div class="part-head"><span class="kicker">Part two</span><h2>Decisions: how it will be built</h2><p>Each decision (an ADR, Architecture Decision Record) is a technical choice and what it costs. "Accepted" means the team has already made this choice; "Proposed" means it's new or changes the synopsis and should be agreed with your Project Guide. Approving a decision marks it accepted; rejecting it marks it rejected.</p></div>
+{{ADR_SECTIONS}}
+
+<footer>Generated from docs/specs/what/user-stories and docs/specs/how/adr in the CampusMate repository by docs/storyboard/build.py. Owners: Ganesh Yavapuram, Hemanjini Peddireddy.</footer>
+</main>
+</div>
+
+<script>
+(function () {
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const state = {};           // id -> {decision, note, recAccepted}
+  let coll = null, readOnly = false, filter = "all";
+
+  // What the repo file's status becomes after a sync, for each page decision.
+  function expectedRepo(card, decision) {
+    if (!decision) return card.dataset.repo;
+    if (card.dataset.kind === "story") return { approved: "approved", changes: "needs-changes", rejected: "rejected" }[decision];
+    return { approved: "accepted", changes: "proposed", rejected: "rejected" }[decision];
+  }
+
+  function paint() {
+    let a = 0, c = 0, r = 0, pending = 0;
+    for (const card of cards) {
+      const id = card.id, s = state[id] || {};
+      const box = card.querySelector(".review");
+      box.querySelectorAll(".choices button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.d === s.decision)));
+      const ta = box.querySelector("textarea");
+      if (document.activeElement !== ta) ta.value = s.note || "";
+      const tag = card.querySelector('[data-state-for="' + id + '"]');
+      tag.className = "state " + (s.decision || "");
+      tag.textContent = s.decision === "approved" ? "Approved here" : s.decision === "changes" ? "Needs changes here" : s.decision === "rejected" ? "Rejected here" : "Not reviewed";
+      if (s.decision === "approved") a++; else if (s.decision === "changes") c++; else if (s.decision === "rejected") r++;
+      const acc = card.querySelector(".accept");
+      if (acc) {
+        acc.setAttribute("aria-pressed", String(!!s.recAccepted));
+        acc.textContent = s.recAccepted ? "Recommendation accepted (tap to undo)" : "Accept recommendation";
+      }
+      const recPending = !!s.recAccepted && card.querySelector('[data-rec-applied="0"]') !== null;
+      const statusPending = expectedRepo(card, s.decision) !== card.dataset.repo;
+      let flag = card.querySelector(".unsynced");
+      if (recPending || statusPending) {
+        pending++;
+        if (!flag) { flag = document.createElement("span"); flag.className = "unsynced"; card.querySelector(".card-head").appendChild(flag); }
+        flag.textContent = "Waiting to sync";
+      } else if (flag) flag.remove();
+    }
+    const n = cards.length, pct = x => (x / n * 100) + "%";
+    document.getElementById("p-done").textContent = a + c + r;
+    document.getElementById("p-a").textContent = a + " approved";
+    document.getElementById("p-c").textContent = c + (c === 1 ? " needs changes" : " need changes");
+    document.getElementById("p-r").textContent = r + " rejected";
+    document.getElementById("b-a").style.width = pct(a);
+    document.getElementById("b-c").style.width = pct(c);
+    document.getElementById("b-r").style.width = pct(r);
+    const sync = document.getElementById("sync");
+    sync.className = pending ? "sync on" : "sync";
+    sync.innerHTML = pending ? "<strong>" + pending + (pending === 1 ? " change is" : " changes are") + " waiting for the repository.</strong> Ask Claude to <code>sync the storyboard</code> to write them into the story and decision files." : "";
+    applyFilter();
+  }
+
+  function applyFilter() {
+    for (const card of cards) {
+      const k = card.dataset.kind, s = state[card.id] || {};
+      let show = true;
+      if (filter === "story") show = k === "story";
+      else if (filter === "adr") show = k === "adr";
+      else if (filter === "todo") show = !s.decision;
+      else if (filter === "q") show = card.dataset.q === "1";
+      else if (filter === "proposed") show = card.dataset.status === "proposed";
+      card.hidden = !show;
+    }
+    document.querySelectorAll("section.area").forEach(sec => {
+      sec.hidden = !sec.querySelector(".card:not([hidden])");
+    });
+  }
+
+  document.querySelectorAll(".filters button").forEach(btn => btn.addEventListener("click", () => {
+    filter = btn.dataset.f;
+    document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    applyFilter();
+  }));
+
+  function body(s) {
+    return { decision: s.decision || null, note: s.note || "", recAccepted: !!s.recAccepted, updatedAt: new Date().toISOString() };
+  }
+
+  async function save(id, patch, msgEl) {
+    const next = Object.assign({}, state[id] || {}, patch);
+    state[id] = next;
+    paint();
+    if (!coll || readOnly) return;
+    msgEl.textContent = "Saving…";
+    try {
+      await coll.doc(id).set(body(next));
+      msgEl.textContent = "Saved";
+    } catch (err) {
+      if (err && err.code === "invalid_argument") { readOnly = true; lock("You can read this page but not record decisions."); }
+      else if (err && err.code === "unavailable") {
+        await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
+        try { await coll.doc(id).set(body(next)); msgEl.textContent = "Saved"; return; } catch (e2) {}
+        msgEl.textContent = "Couldn't save. Try again in a moment.";
+      } else msgEl.textContent = "Couldn't save. Try again in a moment.";
+    }
+  }
+
+  function lock(msg) {
+    const n = document.getElementById("dbnote");
+    n.textContent = msg; n.hidden = false;
+    document.querySelectorAll(".review button, .review textarea, .accept").forEach(el => el.disabled = true);
+  }
+
+  for (const card of cards) {
+    const id = card.id, box = card.querySelector(".review"), msg = box.querySelector(".saved"), ta = box.querySelector("textarea");
+    box.querySelectorAll(".choices button").forEach(b => b.addEventListener("click", () => {
+      const cur = (state[id] || {}).decision;
+      save(id, { decision: cur === b.dataset.d ? null : b.dataset.d }, msg);
+    }));
+    ta.addEventListener("change", () => {
+      if (((state[id] || {}).note || "") === ta.value) return;
+      save(id, { note: ta.value }, msg);
+    });
+    const acc = card.querySelector(".accept");
+    if (acc) acc.addEventListener("click", () => save(id, { recAccepted: !(state[id] || {}).recAccepted }, msg));
+  }
+
+  paint();
+
+  (async () => {
+    let db = null;
+    try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+    if (!db) { lock("Decisions can't be saved in this copy. Open the live storyboard on claude.ai while signed in to record them."); return; }
+    coll = db.collection("reviews");
+    coll.onSnapshot(snap => {
+      for (const d of snap.docs) {
+        const v = d.data() || {};
+        state[d.id] = { decision: v.decision || null, note: v.note || "", recAccepted: !!v.recAccepted };
+      }
+      for (const ch of snap.docChanges()) if (ch.type === "removed") delete state[ch.doc.id];
+      paint();
+    }, err => {
+      if (err && err.code === "revoked") lock("Decisions can no longer be saved in this view.");
+    });
+  })();
+})();
+</script>

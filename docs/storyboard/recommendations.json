@@ -1,0 +1,104 @@
+{
+  "US-003": {
+    "recommendation": "No grace period. Delete straight away, but make the student type DELETE to confirm.",
+    "why": "A typed confirmation stops accidental deletions without the extra work of scheduled deletion jobs.",
+    "add_criteria": ["The \"Delete account\" button stays disabled until the student types DELETE in the confirmation box."],
+    "resolution": "No grace period; the account is deleted immediately after the student types DELETE to confirm."
+  },
+  "US-005": {
+    "recommendation": "No archiving in this version. Deleting a subject is enough for a one-semester project; archiving goes to Future Scope.",
+    "why": "Archiving touches every list and report, which is a lot of work for little benefit within one semester.",
+    "resolution": "Archiving subjects is out of scope for this version and listed under Future Scope."
+  },
+  "US-006": {
+    "recommendation": "One exam date per subject. A subject with a separate practical exam is added as its own subject, for example \"DBMS Practical\".",
+    "why": "This keeps the data model as it is while still covering theory and practical exams.",
+    "resolution": "One exam date per subject; separate practical or theory exams are added as separate subjects."
+  },
+  "US-007": {
+    "recommendation": "Don't model holidays. Attendance warnings use only classes the student has logged; the timetable only shows today's classes and the next class date.",
+    "why": "Predicting future classes needs a holiday calendar the app doesn't have. Using logged classes keeps warnings correct.",
+    "add_criteria": ["Attendance percentages and warnings use only logged attendance records, never classes predicted from the timetable."],
+    "resolution": "Holidays aren't modelled; warnings use logged attendance only, and the timetable is used for today's classes and the next class date."
+  },
+  "US-010": {
+    "recommendation": "Use a 1.5× rule: each weak subject gets at least 1.5 times the total minutes of every non-weak subject with the same or a later exam date.",
+    "why": "A number makes the rule testable, and the planner can reject an AI plan that breaks it.",
+    "add_criteria": ["Each weak subject's total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later."],
+    "resolution": "Weak subjects get at least 1.5 times the minutes of non-weak subjects with the same or a later exam date."
+  },
+  "US-011": {
+    "recommendation": "One value for every day in this version. Separate weekday and weekend hours go to Future Scope.",
+    "why": "A single number keeps the planner form and the AI prompt simple.",
+    "resolution": "One daily study-hours value applies to every day; per-weekday hours are Future Scope."
+  },
+  "US-013": {
+    "recommendation": "Don't change the status automatically. A planned session from a past date shows \"Not marked\", and the dashboard asks the student to mark it completed or missed.",
+    "why": "Automatic changes would trigger re-plans the student didn't ask for and use AI requests.",
+    "add_criteria": ["A planned session dated before today shows a \"Not marked\" label, and the dashboard lists it with buttons to mark it completed or missed."],
+    "resolution": "Past planned sessions aren't changed automatically; they show \"Not marked\" and the dashboard prompts the student."
+  },
+  "US-017": {
+    "recommendation": "Keep the 10 MB limit and accept only PDF and plain text. Word and PowerPoint go to Future Scope; students can save those files as PDF.",
+    "why": "PDF text extraction is reliable and free; each extra format needs another library and more testing.",
+    "resolution": "10 MB limit; PDF and plain text only. Word and PowerPoint support is Future Scope."
+  },
+  "US-018": {
+    "recommendation": "A fixed 8 questions per quiz.",
+    "why": "A fixed size keeps AI requests small, makes scores comparable between attempts, and is easy to test.",
+    "replace_criteria": [["Each successfully processed note has a quiz of 5 to 10 multiple-choice questions.", "Each successfully processed note has a quiz of exactly 8 multiple-choice questions."]],
+    "resolution": "Every quiz has exactly 8 questions."
+  },
+  "US-019": {
+    "recommendation": "No XP for quizzes in this version.",
+    "why": "Quizzes can be retaken any number of times, so quiz XP would be easy to farm. XP stays tied to assignments and study sessions.",
+    "resolution": "Quizzes don't award XP in this version."
+  },
+  "US-024": {
+    "recommendation": "Add an optional description of up to 500 characters. Keep due dates as dates only, since course deadlines are given as dates.",
+    "why": "A description holds instructions copied from the group chat; a due time adds time-zone complexity for little gain.",
+    "add_criteria": ["The student can add an optional description of up to 500 characters; longer text is rejected with a message."],
+    "resolution": "Assignments get an optional description (needs a description column on Assignment); due dates stay date-only."
+  },
+  "US-027": {
+    "recommendation": "Yes. Without due times, \"due today or tomorrow\" is the clearest rule.",
+    "why": "It matches how students read deadlines and needs no extra data.",
+    "resolution": "\"Due soon\" means due today or tomorrow in the student's time zone."
+  },
+  "US-029": {
+    "recommendation": "In-app reminders only for this version, as ADR-019 proposes. Email reminders go to Future Scope.",
+    "why": "Free hosting can't run a reliable scheduler for emails.",
+    "resolution": "Reminders are in-app only; email reminders are Future Scope."
+  },
+  "US-033": {
+    "recommendation": "Yes. Update TC-05 in the synopsis to expect an \"At risk\" warning at 18 of 24.",
+    "why": "Warning before a shortfall is this feature's main promise, and at 18 of 24 one more absence drops the student to 72%.",
+    "resolution": "TC-05 in the synopsis is updated to expect an \"At risk\" warning at 18 of 24."
+  },
+  "US-034": {
+    "recommendation": "Keep 20 XP per assignment and 10 XP per study session, with no XP for quizzes (see US-019).",
+    "why": "Assignments take more effort than one session, and the round numbers are easy to explain.",
+    "resolution": "20 XP per completed assignment, 10 XP per completed study session, none for quizzes."
+  },
+  "US-035": {
+    "recommendation": "No. Only completing an assignment or a study session counts as activity.",
+    "why": "The streak should measure studying, not record-keeping.",
+    "resolution": "Only completing an assignment or a study session counts towards the streak."
+  },
+  "US-036": {
+    "recommendation": "Four badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.",
+    "why": "Four badges cover a first win, consistency, workload and mastery without much extra code.",
+    "replace_criteria": [["The full badge list and the conditions for each are defined before this story is built.", "The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz)."]],
+    "resolution": "Badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score."
+  },
+  "US-037": {
+    "recommendation": "Yes, a flat 100 XP per level.",
+    "why": "It's easy to explain to students and to test.",
+    "resolution": "Each level needs 100 XP."
+  },
+  "US-039": {
+    "recommendation": "Yes. Remove focus time from §5.5 of the synopsis.",
+    "why": "Nothing in the app records focus time, so the report can't show it.",
+    "resolution": "Focus time is removed from the report and from synopsis §5.5."
+  }
+}

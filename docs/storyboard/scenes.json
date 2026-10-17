@@ -1,0 +1,521 @@
+{
+  "story_areas": [
+    {
+      "key": "start",
+      "name": "Getting started",
+      "intro": "Priya's first five minutes: signing in, setting up and staying in control of her account.",
+      "ids": [
+        "US-001",
+        "US-002",
+        "US-003",
+        "US-004"
+      ]
+    },
+    {
+      "key": "subjects",
+      "name": "Subjects and timetable",
+      "intro": "The foundation everything else hangs on: what Priya studies, when her exams are, and when her classes run.",
+      "ids": [
+        "US-005",
+        "US-006",
+        "US-007"
+      ]
+    },
+    {
+      "key": "dashboard",
+      "name": "The daily dashboard",
+      "intro": "The one screen Priya opens every morning.",
+      "ids": [
+        "US-008",
+        "US-009"
+      ]
+    },
+    {
+      "key": "planner",
+      "name": "Smart planner",
+      "intro": "Turning exams, weak subjects and spare hours into a study plan that adapts when life gets in the way.",
+      "ids": [
+        "US-010",
+        "US-011",
+        "US-012",
+        "US-013",
+        "US-014",
+        "US-015",
+        "US-016"
+      ]
+    },
+    {
+      "key": "notes",
+      "name": "AI notes and quizzes",
+      "intro": "Turning a pile of PDFs into summaries and self-tests.",
+      "ids": [
+        "US-017",
+        "US-018",
+        "US-019",
+        "US-020",
+        "US-021",
+        "US-022",
+        "US-023"
+      ]
+    },
+    {
+      "key": "assignments",
+      "name": "Assignments",
+      "intro": "Getting deadlines out of the WhatsApp group and into one list.",
+      "ids": [
+        "US-024",
+        "US-025",
+        "US-026",
+        "US-027",
+        "US-028",
+        "US-029"
+      ]
+    },
+    {
+      "key": "attendance",
+      "name": "Attendance",
+      "intro": "Knowing about a shortfall while there is still time to fix it.",
+      "ids": [
+        "US-030",
+        "US-031",
+        "US-032",
+        "US-033"
+      ]
+    },
+    {
+      "key": "rewards",
+      "name": "Rewards",
+      "intro": "Small rewards that make studying every day feel worth it.",
+      "ids": [
+        "US-034",
+        "US-035",
+        "US-036",
+        "US-037",
+        "US-038"
+      ]
+    },
+    {
+      "key": "reports",
+      "name": "Reports",
+      "intro": "Looking back at the week, and having something to show the guide.",
+      "ids": [
+        "US-039",
+        "US-040",
+        "US-041",
+        "US-042"
+      ]
+    },
+    {
+      "key": "everywhere",
+      "name": "Everywhere in the app",
+      "intro": "Promises that apply on every screen.",
+      "ids": [
+        "US-043",
+        "US-044"
+      ]
+    }
+  ],
+  "adr_areas": [
+    {
+      "key": "foundation",
+      "name": "Foundation",
+      "intro": "The big structural choices: how the app is split up and what it is built with.",
+      "ids": [
+        "ADR-001",
+        "ADR-002",
+        "ADR-003",
+        "ADR-025",
+        "ADR-026",
+        "ADR-030",
+        "ADR-031"
+      ]
+    },
+    {
+      "key": "identity",
+      "name": "Identity, security and privacy",
+      "intro": "Who can get in, who can see what, and where secrets live.",
+      "ids": [
+        "ADR-004",
+        "ADR-011",
+        "ADR-007",
+        "ADR-022",
+        "ADR-027"
+      ]
+    },
+    {
+      "key": "data",
+      "name": "Data and the database",
+      "intro": "How information is stored, kept correct and removed.",
+      "ids": [
+        "ADR-006",
+        "ADR-017",
+        "ADR-008",
+        "ADR-009",
+        "ADR-013",
+        "ADR-014",
+        "ADR-023",
+        "ADR-020",
+        "ADR-021"
+      ]
+    },
+    {
+      "key": "ai",
+      "name": "AI features",
+      "intro": "How CampusMate uses free AI models without breaking when they misbehave.",
+      "ids": [
+        "ADR-005",
+        "ADR-018",
+        "ADR-010",
+        "ADR-012",
+        "ADR-015",
+        "ADR-024"
+      ]
+    },
+    {
+      "key": "running",
+      "name": "Running, testing and reporting",
+      "intro": "Where the app lives, how it reminds students, and how we prove it works.",
+      "ids": [
+        "ADR-016",
+        "ADR-019",
+        "ADR-028",
+        "ADR-029"
+      ]
+    }
+  ],
+  "stories": {
+    "US-001": {
+      "moment": "Priya opens CampusMate on the family laptop, taps \"Sign in with Google\" and lands on her dashboard. No new password to invent or forget.",
+      "analogy": "Like walking into the college library with the ID card you already have, instead of applying for a separate library pass."
+    },
+    "US-002": {
+      "moment": "Priya finishes revising on a study-centre computer and taps \"Sign out\". The next student who sits down sees only the login screen.",
+      "analogy": "Like locking your locker before you leave the library."
+    },
+    "US-003": {
+      "moment": "Priya changes \"Priya S\" to \"Priya Sharma\". After graduating, she deletes her account and every note, plan and mark is gone.",
+      "analogy": "Like handing back your hostel room key: you change the name on the door while you live there, and you clear everything out when you leave."
+    },
+    "US-004": {
+      "moment": "On her very first visit, CampusMate asks for her five subjects and how many hours she can study each day, so her dashboard isn't an empty page.",
+      "analogy": "Like the first page of a new diary, where you write your timetable before anything else."
+    },
+    "US-005": {
+      "moment": "Priya adds \"DBMS\", fixes the typo in \"Cumputer Networks\", and deletes an elective she dropped, along with its old assignments.",
+      "analogy": "Subjects are the folders in your school bag. Every assignment, note and attendance mark goes inside one."
+    },
+    "US-006": {
+      "moment": "Priya sets her DBMS exam for 12 December and marks Maths as a weak subject. The dashboard now says \"DBMS exam in 9 days\".",
+      "analogy": "Like circling exam dates in red on the wall calendar and putting a star next to the subject you find hardest."
+    },
+    "US-007": {
+      "moment": "Priya enters her counselling sessions: DBMS every Monday and Wednesday, 6 to 7 pm. On Monday the dashboard shows them under \"Today's classes\".",
+      "analogy": "Like the class timetable pinned on the noticeboard. The app needs its own copy to know what \"today\" looks like."
+    },
+    "US-008": {
+      "moment": "Each morning Priya opens one screen: two classes today, a DBMS assignment due tomorrow, Maths exam in 9 days, Networks attendance at risk, and a 5-day streak.",
+      "analogy": "Like a car dashboard: fuel, speed and warning lights in one glance, without opening the bonnet."
+    },
+    "US-009": {
+      "moment": "Her dashboard says: \"Revise normalisation in DBMS for 45 minutes. Your exam is in 9 days.\" It says the same thing all day, and something new tomorrow.",
+      "analogy": "Like a tutor who leaves you one sticky note each morning instead of giving a lecture."
+    },
+    "US-010": {
+      "moment": "Priya says she has 2 hours a day. CampusMate builds a plan from today to her last exam, giving Maths extra time.",
+      "analogy": "Like a GPS planning the route to your exam date, given how much fuel (time) you have each day."
+    },
+    "US-011": {
+      "moment": "Priya set \"2 hours a day\" once. Next week, when she regenerates her plan, the form already says 2.",
+      "analogy": "Like your phone remembering your home address so you don't type it every time you book a cab."
+    },
+    "US-012": {
+      "moment": "Priya opens the timetable and sees Monday to Sunday: today highlighted, finished sessions marked done, the one she missed marked missed.",
+      "analogy": "The weekly spread in a paper planner."
+    },
+    "US-013": {
+      "moment": "After 45 minutes on DBMS, Priya ticks the session done. It turns green and she earns 10 XP.",
+      "analogy": "Ticking a box on your to-do list, and getting a gold star for it."
+    },
+    "US-014": {
+      "moment": "Her shift ran late and she missed Thursday's Maths session. She marks it missed, and the rest of the week reshuffles to fit it back in.",
+      "analogy": "Like GPS recalculating when you miss a turn, instead of telling you to drive back to where you went wrong."
+    },
+    "US-015": {
+      "moment": "The DBMS exam moves from 12 to 20 December. Priya taps \"Regenerate plan\" and her sessions spread out over the extra week.",
+      "analogy": "Re-planning a trip when the train date changes."
+    },
+    "US-016": {
+      "moment": "The AI is overloaded. Priya sees \"The AI service is unavailable, try again later\", and her existing plan is untouched.",
+      "analogy": "Like an ATM that shows \"Out of service\" instead of swallowing your card and giving you no cash."
+    },
+    "US-017": {
+      "moment": "Priya uploads a 20-page DBMS PDF and gets a one-page summary of the key points a moment later.",
+      "analogy": "Like a friend who reads the whole chapter and gives you the key points on one page."
+    },
+    "US-018": {
+      "moment": "From the same PDF, CampusMate writes 8 multiple-choice questions about normalisation and keys.",
+      "analogy": "Like a friend who quizzes you from your own notes the night before an exam."
+    },
+    "US-019": {
+      "moment": "Priya answers the 8 questions, scores 6 out of 8, and sees the correct answer for the two she got wrong.",
+      "analogy": "A practice test that is marked the moment you hand it in."
+    },
+    "US-020": {
+      "moment": "On the DBMS note, Priya sees her scores go from 4/8 to 6/8 to 8/8 over a week.",
+      "analogy": "Like the marks on your report cards across a term, showing you improving."
+    },
+    "US-021": {
+      "moment": "Priya types \"normal\" in the search box and finds \"Normalisation notes\" among 30 uploads. She deletes an old draft she no longer needs.",
+      "analogy": "A library catalogue instead of a pile of photocopies on your desk."
+    },
+    "US-022": {
+      "moment": "The summary skipped the topic Priya cared about. She taps \"Regenerate summary\" and gets a better one; her old quiz scores stay.",
+      "analogy": "Asking a friend to explain it again, a different way."
+    },
+    "US-023": {
+      "moment": "Priya tries to upload a Word file. CampusMate tells her straight away it accepts PDF and text files only.",
+      "analogy": "Like a vending machine that hands back a foreign coin and shows which coins it takes."
+    },
+    "US-024": {
+      "moment": "The WhatsApp group announces \"DBMS assignment due 30 Nov\". Priya adds it to CampusMate in ten seconds.",
+      "analogy": "Writing the deadline in your diary instead of trusting the group chat to remind you."
+    },
+    "US-025": {
+      "moment": "The deadline is extended to 5 December. Priya edits the date instead of deleting and re-adding the assignment.",
+      "analogy": "Correcting the date in your diary, rather than starting a new diary."
+    },
+    "US-026": {
+      "moment": "Priya submits her assignment and marks it done: +20 XP. She reopens it by accident and completes it again, and gets no extra XP.",
+      "analogy": "Stamping \"Submitted\" on your assignment. One submission gets one stamp."
+    },
+    "US-027": {
+      "moment": "The assignment due tomorrow carries a \"Due soon\" tag on her dashboard.",
+      "analogy": "A yellow highlighter on the urgent line in your diary."
+    },
+    "US-028": {
+      "moment": "Priya missed a deadline. That assignment shows \"Overdue\" until she completes it.",
+      "analogy": "The \"overdue\" stamp on a library book you forgot to return."
+    },
+    "US-029": {
+      "moment": "A small bell in the header shows \"2\". Tapping it lists the two assignments that need her attention.",
+      "analogy": "A notice board at the college gate that you see every time you walk in. It won't phone you at home."
+    },
+    "US-030": {
+      "moment": "After class Priya marks herself present. Networks shows 17 of 24: 70.8%.",
+      "analogy": "The teacher's attendance register, but in your pocket."
+    },
+    "US-031": {
+      "moment": "Priya accidentally marked last Monday absent. She opens the history and changes it to present.",
+      "analogy": "Rubbing out a pencil mistake in the register."
+    },
+    "US-032": {
+      "moment": "DBMS says \"You can miss 2 more classes\". Networks says \"Attend the next 4 classes\".",
+      "analogy": "Like a phone battery that says \"3 hours left\" instead of just \"62%\"."
+    },
+    "US-033": {
+      "moment": "DBMS is at exactly 75% (18 of 24), but CampusMate shows \"At risk\", because one more absence would drop it to 72%.",
+      "analogy": "The fuel light that comes on before the tank is empty, not after."
+    },
+    "US-034": {
+      "moment": "Every finished assignment gives Priya 20 XP and every finished study session 10 XP.",
+      "analogy": "Points on a supermarket loyalty card for every purchase."
+    },
+    "US-035": {
+      "moment": "Priya has studied 5 days in a row. If she skips a whole day, the count goes back to 0.",
+      "analogy": "A daily watering chart for a plant: miss a day and you start counting again."
+    },
+    "US-036": {
+      "moment": "On day 7 of her streak, a message pops up: \"Badge unlocked: 7-Day Streak\".",
+      "analogy": "Scout badges sewn onto a sash, one for each milestone."
+    },
+    "US-037": {
+      "moment": "With 240 XP Priya is level 3, and the bar shows 40 of 100 XP to level 4.",
+      "analogy": "Belt colours in karate."
+    },
+    "US-038": {
+      "moment": "Priya's profile shows her XP, level, streak and every badge she has earned, with the dates. Locked badges show what she needs to do.",
+      "analogy": "A trophy shelf, with empty spaces labelled for the trophies still to win."
+    },
+    "US-039": {
+      "moment": "Sunday evening, Priya opens the weekly report: 6 h 30 min studied, 3 of 4 assignments done.",
+      "analogy": "The weekly summary in a fitness app, but for studying."
+    },
+    "US-040": {
+      "moment": "Before meeting her guide, Priya opens the attendance report: every subject, classes held, attended, percentage and status.",
+      "analogy": "A report card for attendance."
+    },
+    "US-041": {
+      "moment": "The assignment report shows DBMS: 3 completed, 1 overdue; Maths: 2 pending.",
+      "analogy": "The teacher's assignment register, sorted by subject."
+    },
+    "US-042": {
+      "moment": "Two weeks before exams, Priya opens the notes log and reads every summary in one list.",
+      "analogy": "A revision folder of one-page cheat sheets."
+    },
+    "US-043": {
+      "moment": "Rahul is also on CampusMate. Even if he guesses the web address of one of Priya's notes, he gets \"not found\".",
+      "analogy": "Your bank shows only your account, even if you type someone else's account number."
+    },
+    "US-044": {
+      "moment": "In class, Priya logs attendance from her phone. Every screen fits without scrolling sideways.",
+      "analogy": "A pocket diary and a desk diary with the same pages."
+    }
+  },
+  "adrs": {
+    "ADR-001": {
+      "plain": "CampusMate is split into three layers: the screens students see (Angular), the brain that applies the rules (FastAPI), and the memory that stores everything (the database).",
+      "analogy": "A restaurant: the dining room (screens), the kitchen (rules), the storeroom (database). Customers never walk into the kitchen, so the secret recipe (the AI key) stays safe.",
+      "means": "You learn two languages instead of one, and in return the AI key stays safe and the code matches the diagrams in your synopsis."
+    },
+    "ADR-002": {
+      "plain": "Screens are built from Angular Material's ready-made buttons, forms, tables and dialogs instead of designing each one from scratch.",
+      "analogy": "Building furniture from a flat-pack kit rather than cutting raw wood.",
+      "means": "You save weeks of design work, and the app looks like a standard Material app."
+    },
+    "ADR-003": {
+      "plain": "The back end is written in Python using FastAPI, which checks every incoming request automatically before your code runs.",
+      "analogy": "A guard at the kitchen door who checks every order slip is filled in properly before the cook sees it.",
+      "means": "The synopsis names FastAPI without a reason; this gives you the answer when the examiner asks."
+    },
+    "ADR-004": {
+      "plain": "Students sign in only with their Google account. CampusMate never stores a password.",
+      "analogy": "Using an ID card students already carry instead of printing your own passes.",
+      "means": "No password system to build or protect; students without a Google account can't use the app."
+    },
+    "ADR-005": {
+      "plain": "All AI features use free models through one service, OpenRouter, called only from the server. Swapping models is a settings change.",
+      "analogy": "A free shared taxi stand with many drivers: it costs nothing, but some days there are few taxis and you only get a few rides.",
+      "means": "Zero cost, but daily request limits and changing models are permanent facts of life for the project."
+    },
+    "ADR-006": {
+      "plain": "Use the simple file-based SQLite on your laptop, and a free PostgreSQL database when the app is online.",
+      "analogy": "Practise in a rough notebook at home, but keep the final records in the college office's filing cabinet, because the free host clears its desks every night.",
+      "means": "Without this, every student's data on the live app could vanish the next time you deploy."
+    },
+    "ADR-007": {
+      "plain": "Every record gets a long random id like 3f9c…a1, not 1, 2, 3.",
+      "analogy": "Random locker codes instead of lockers numbered 1, 2, 3, so nobody can guess the next one.",
+      "means": "Tiny cost; web addresses can't be guessed to reach other students' data."
+    },
+    "ADR-008": {
+      "plain": "A note's AI summary and quiz are stored on the note itself; each quiz attempt is stored separately.",
+      "analogy": "Stapling the summary sheet to the back of the notes instead of filing it in a different cabinet.",
+      "means": "Simpler code, but you should explain in the report why the quiz isn't split into question tables."
+    },
+    "ADR-009": {
+      "plain": "Store each earned badge as its own row with the date earned, instead of a list squeezed into one column.",
+      "analogy": "A proper register with one line per badge and date, rather than badge names scribbled in a margin.",
+      "means": "One more table, and a schema the examiner can't fault for breaking normal form."
+    },
+    "ADR-010": {
+      "plain": "When a student misses a session, ask the AI to rebuild the rest of the plan. Finished and missed sessions stay as history; if the AI fails, nothing changes.",
+      "analogy": "GPS recalculating the route after a missed turn.",
+      "means": "Plans stay realistic, but every missed session uses one AI request."
+    },
+    "ADR-011": {
+      "plain": "One shared check runs on every request to make sure a student only ever touches their own records.",
+      "analogy": "Every bank teller follows the same rule: check the passbook matches the customer before showing anything.",
+      "means": "One place to get right; skipping it would let one student read another's notes."
+    },
+    "ADR-012": {
+      "plain": "The dashboard's AI suggestion is created once per student per day and saved, not on every page load.",
+      "analogy": "Writing today's thought on the classroom whiteboard once each morning, instead of every time someone walks in.",
+      "means": "Protects the free AI quota; the tip can't change during the day."
+    },
+    "ADR-013": {
+      "plain": "The 75% rule lives in one setting, and the maths uses whole numbers so 75% is never miscounted.",
+      "analogy": "A thermostat dial set to 75, instead of a wire soldered at 75.",
+      "means": "Easy to change for another university; exact results at the boundary."
+    },
+    "ADR-014": {
+      "plain": "When a note is uploaded, keep its text in the database and throw the file away in the live app.",
+      "analogy": "Photocopying the important pages into your register and returning the book, instead of renting a shelf for it.",
+      "means": "No paid storage needed; students can't re-download the original file from the live app."
+    },
+    "ADR-015": {
+      "plain": "Read text from typed PDFs and text files only. Scanned pages and handwriting are refused with a clear message, unless a free AI that can read images becomes available.",
+      "analogy": "A scanner that reads printed pages perfectly but can't read your handwriting.",
+      "means": "Reliable from day one, but you must say in the synopsis that handwritten notes aren't supported yet."
+    },
+    "ADR-016": {
+      "plain": "Screens are hosted on Firebase Hosting, the back end on Render, and the database on Neon, all on free plans.",
+      "analogy": "Three free stalls at a college fair: posters at one, the counter at another, the storeroom at a third. The counter staff nap when it's quiet, so the first visitor waits a minute.",
+      "means": "Free and reachable by your evaluator; open the app a minute before your demo to wake it up."
+    },
+    "ADR-017": {
+      "plain": "Talk to the database through SQLAlchemy and record every change to the table structure with Alembic.",
+      "analogy": "A translator who speaks both SQLite and PostgreSQL, plus a logbook of every change to the building's floor plan.",
+      "means": "Lets you switch databases safely, and the logbook doubles as proof you did the work."
+    },
+    "ADR-018": {
+      "plain": "Every AI call waits at most 60 seconds, tries once more, then tries a backup model, checks the answer, and saves nothing unless it's all good.",
+      "analogy": "Ordering from a busy kitchen: wait a set time, ask again, try the kitchen next door, and inspect the dish before serving. Never serve half a plate.",
+      "means": "Predictable errors and no half-saved plans; students may wait on a spinner."
+    },
+    "ADR-019": {
+      "plain": "Deadline reminders appear inside the app only: a bell and labels on the dashboard. No emails or phone notifications.",
+      "analogy": "A notice board at the college gate, not a phone call at home.",
+      "means": "Nothing extra to host; a student who doesn't open the app gets no reminder."
+    },
+    "ADR-020": {
+      "plain": "Every student's \"today\" is worked out in their own time zone, saved when they first sign in.",
+      "analogy": "Indian train timetables are printed in IST even if the railway's computers are abroad.",
+      "means": "Streaks and overdue labels stay correct wherever the server runs."
+    },
+    "ADR-021": {
+      "plain": "Each XP award is written once in a ledger with a unique receipt number, so the same assignment can't pay out twice.",
+      "analogy": "A receipt book where each receipt number can only be used once.",
+      "means": "Stops XP farming by ticking and unticking; one more table."
+    },
+    "ADR-022": {
+      "plain": "Only use AI providers that don't keep or train on what's sent, tell students their notes go to an outside AI, and never send names or emails.",
+      "analogy": "Taking your notes to an outside print shop: you choose one that promises not to keep copies, and you tell the owner of the notes.",
+      "means": "Students are informed and safer; fewer free models may qualify."
+    },
+    "ADR-023": {
+      "plain": "Deleting a subject deletes everything inside it; deleting an account deletes everything. A confirmation shows exactly what will go.",
+      "analogy": "Throwing away a folder throws away the pages inside it.",
+      "means": "No messy leftovers; there is no undo."
+    },
+    "ADR-024": {
+      "plain": "Each student can make up to 20 AI requests a day.",
+      "analogy": "The canteen gives each student 20 coupons a day, so the first in the queue can't take all the food.",
+      "means": "Fair for everyone; a student cramming for exams may hit the limit."
+    },
+    "ADR-025": {
+      "plain": "All server addresses follow one pattern, /api/v1/subjects, /api/v1/notes and so on, and errors always look the same.",
+      "analogy": "Standard house numbers on a street, so the postman always finds the right door.",
+      "means": "Cleaner code and tests; changing it later means changing every address."
+    },
+    "ADR-026": {
+      "plain": "One GitHub repository with three folders: frontend, backend and docs.",
+      "analogy": "One project binder with three tabbed sections instead of three separate binders.",
+      "means": "One history of all your work, which is the evidence of originality the guidelines ask for."
+    },
+    "ADR-027": {
+      "plain": "Passwords and keys live in environment settings that never go into GitHub; the repo holds only an example file.",
+      "analogy": "Keeping your house key in your pocket, not under the doormat of a public building.",
+      "means": "The repository is public, so this is what keeps your AI key from being stolen."
+    },
+    "ADR-028": {
+      "plain": "Automated tests use recorded AI answers instead of the real AI, and run on every push to GitHub.",
+      "analogy": "Pilots practise in a flight simulator with recorded scenarios instead of real planes.",
+      "means": "Free, repeatable test evidence for the report; a few live checks are still needed before submission."
+    },
+    "ADR-029": {
+      "plain": "Reports are calculated fresh each time they're opened, can be downloaded as CSV, and printed from the browser.",
+      "analogy": "Your bank calculating your balance when you check, instead of printing yesterday's.",
+      "means": "Always accurate and simple; no history of past weeks."
+    },
+    "ADR-030": {
+      "plain": "The back end has one folder per feature, and each folder splits the work into a route (the web address), a controller (turns problems into clear error messages) and a service (the actual rules and database work).",
+      "analogy": "A hospital department: reception takes your request (route), a nurse decides where it goes and explains any problem (controller), and the doctor does the actual work (service). Every department is organised the same way.",
+      "means": "About five small files per feature; in return every bug points to one file and the rules can be tested on their own."
+    },
+    "ADR-031": {
+      "plain": "The front end has three areas: core (sign-in and the page frame used everywhere), shared (reusable pieces like spinners and dialogs) and features (one folder per screen group, loaded only when opened).",
+      "analogy": "A shopping mall: building services (core) serve every shop, benches and lifts (shared) belong to no single shop, and each shop (feature) keeps its own stock and opens only when a customer walks in.",
+      "means": "More folders and a little setup per feature; in return a faster first load and features that can't break each other."
+    }
+  }
+}
