@@ -45,10 +45,12 @@ Not built.
 
 ## Open questions
 
-Is 10 MB the right size limit? Do students need Word (.docx) or PowerPoint (.pptx) support?
+Resolved 2026-10-18: 10 MB limit; PDF and plain text only. Word and PowerPoint support is Future Scope.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
 
 - **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Keep the 10 MB limit and accept only PDF and plain text. Word and PowerPoint go to Future Scope; students can save those files as PDF.

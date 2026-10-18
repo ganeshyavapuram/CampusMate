@@ -4,7 +4,7 @@ title: Angular with Angular Material for the front end
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
@@ -91,7 +91,7 @@ Requested in review: a bold, modern ("Gen Z") look with noticeable animation, us
 _No discussion yet. Add notes below with your name and the date._
 
 - **Review, 2026-10-18:** Needs changes. Along with them use these websites for the UI suggestions and animatations i need the asthetic
- GEN Z style cool animations that reflect in the app
+  GEN Z style cool animations that reflect in the app
   - <https://ui.watermelon.sh/animated-components/onboarding-screen>
   - <https://dribbble.com/search/oboarding>
   - <https://motion-primitives.com/docs/toolbar-expandable>
@@ -104,3 +104,5 @@ _No discussion yet. Add notes below with your name and the date._
   - <https://godly.design/website/kira-learning/>
   - <https://www.kira-learning.com/2.0-launch>
   - <https://uiverse.io/cards>
+
+- **Review, 2026-10-18:** Approved after the amendment.

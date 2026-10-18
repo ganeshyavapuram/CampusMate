@@ -45,6 +45,16 @@ def format_note(note):
     return "\n".join([lines[0]] + rest)
 
 
+def recorded(note, text):
+    """True when a note is already in the Discussion, even if its wording was tidied by hand."""
+    disc = specs.get_section(text, "Discussion")
+    urls = re.findall(r"https?://[^\s>]+", note)
+    if urls:
+        return all(u in disc for u in urls)
+    squash = lambda x: re.sub(r"\W+", "", x).lower()
+    return squash(note) in squash(disc)
+
+
 def add_discussion(text, line):
     disc = specs.get_section(text, "Discussion")
     if line in disc:
@@ -98,10 +108,11 @@ def apply(item_id, review, date):
         if specs.front(text)["status"] != new_status:
             text = specs.set_front(text, "status", new_status)
             log.append(f"status -> {new_status}")
-            text = add_discussion(text, f"- **Review, {date}:** {WORDS[decision]}." + (f" {note}" if note else ""))
-        elif note:
+            fresh_note = note and not recorded(note, text)
+            text = add_discussion(text, f"- **Review, {date}:** {WORDS[decision]}." + (f" {note}" if fresh_note else ""))
+        elif note and not recorded(note, text):
             text = add_discussion(text, f"- **Review, {date}:** {WORDS[decision]}. {note}")
-    elif note:
+    elif note and not recorded(note, text):
         text = add_discussion(text, f"- **Review note, {date}:** {note}")
     if text != before and not log:
         log.append("note added")

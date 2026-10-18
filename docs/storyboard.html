@@ -186,7 +186,7 @@ footer { color: var(--muted); font-size: 14px; }
     <div><b>4. Decide</b>Approve, ask for changes, or reject, and add a note. Where a story has an open question, accept our recommendation or leave a note with your own answer.</div>
     <div><b>5. Sync</b>Ask Claude to <i>sync the storyboard</i>. Your decisions and accepted recommendations are written into the story and decision files in the repository, and the "In repo" label updates.</div>
   </div>
-  <p class="lede" style="font-size:16px">1 story still has an open question and 1 decision is still proposed. Those need the most attention.</p>
+  <p class="lede" style="font-size:16px">Every story and decision has been reviewed and has no open questions.</p>
 </section>
 
 <div class="toolbar">
@@ -604,7 +604,7 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-016" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-notes"><div class="area-head"><span class="scene-no">Scene 5</span><h2>AI notes and quizzes</h2><p>Turning a pile of PDFs into summaries and self-tests.</p></div><article class="card" id="US-017" data-kind="story" data-q="1" data-repo="approved">
+</article></section><section class="area" id="area-notes"><div class="area-head"><span class="scene-no">Scene 5</span><h2>AI notes and quizzes</h2><p>Turning a pile of PDFs into summaries and self-tests.</p></div><article class="card" id="US-017" data-kind="story" data-q="0" data-repo="approved">
 <header class="card-head"><span class="id">US-017</span><h3>Upload a note and get an AI summary</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-017">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya uploads a 20-page DBMS PDF and gets a one-page summary of the key points a moment later.</p></div>
 <div class="pair">
@@ -614,11 +614,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want to upload my notes for a subject and get an AI summary, so that I can revise the key points quickly.</p>
 <details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The upload screen requires choosing a subject and a file.</li><li>The upload screen shows a one-line notice that notes are processed by an external AI service.</li><li>PDF and plain-text files up to 10 MB are accepted.</li><li>After a successful upload the AI summary is shown, and reopening the note later shows the same summary without a new AI request.</li><li>A PDF with no extractable text is rejected with a message explaining it may be a scanned document.</li></ul>
 <p class="oos"><strong>Not included:</strong> Images and handwritten notes (unless ADR-015 is amended), Word and PowerPoint files, and editing the summary.</p></details>
-<div class="question" data-rec="US-017" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Is 10 MB the right size limit? Do students need Word (.docx) or PowerPoint (.pptx) support?</p>
+<div class="question resolved" data-rec="US-017" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: 10 MB limit; PDF and plain text only. Word and PowerPoint support is Future Scope.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Keep the 10 MB limit and accept only PDF and plain text. Word and PowerPoint go to Future Scope; students can save those files as PDF.</p><p class="rec-why">PDF text extraction is reliable and free; each extra format needs another library and more testing.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: 10 MB limit; PDF and plain text only. Word and PowerPoint support is Future Scope.</li></ul><button type="button" class="accept" data-accept="US-017" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: 10 MB limit; PDF and plain text only. Word and PowerPoint support is Future Scope.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-005">ADR-005</a> <a class="ref" href="#ADR-014">ADR-014</a> <a class="ref" href="#ADR-015">ADR-015</a> <a class="ref" href="#ADR-022">ADR-022</a></p>
 <div class="review" data-id="US-017">
@@ -1335,8 +1335,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-002" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-002</span><h3>Angular with Angular Material for the front end</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-002">Not reviewed</span></header>
+<article class="card adr" id="ADR-002" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-002</span><h3>Angular with Angular Material for the front end</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-002">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Screens are built from Angular Material&#x27;s ready-made buttons, forms and dialogs, then restyled with a bold CampusMate theme and smooth, playful animations so the app feels modern rather than stock.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Buying a well-built flat-pack wardrobe and then painting it, adding new handles and lights: sturdy inside, your own style outside.</p></div>
@@ -1346,7 +1346,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Ready-made dialogs, tables, date pickers and form validation.</li><li>A distinctive, animated look that students enjoy using, without giving up Material&#x27;s accessibility.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Custom theming and animation add design and build time (about 3–4 days, inside the interface-polish week).</li><li>Most of the reference components are written for React, so effects must be rebuilt in Angular rather than copied.</li><li>Angular major versions arrive every six months and may need upgrade work.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The student is new to front-end frameworks and the schedule allows three weeks of learning (synopsis §9). Every screen needs forms, tables, dialogs and responsive layout. Hand-styling components would consume the time needed for the AI features.</p>
 <p><strong>Chosen:</strong> Angular + Angular Material. <strong>Also considered:</strong></p><ul><li>React + MUI</li><li>Plain HTML, CSS and JavaScript</li></ul>
