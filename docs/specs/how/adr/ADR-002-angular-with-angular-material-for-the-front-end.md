@@ -90,7 +90,8 @@ Requested in review: a bold, modern ("Gen Z") look with noticeable animation, us
 
 _No discussion yet. Add notes below with your name and the date._
 
-- **Review, 2026-10-18:** Needs changes. Along with them use there wensite for the UI suggestions and animatations i nneed the asthetic GEN Z style cool animations that reflect in the app
+- **Review, 2026-10-18:** Needs changes. Along with them use these websites for the UI suggestions and animatations i need the asthetic
+ GEN Z style cool animations that reflect in the app
   - <https://ui.watermelon.sh/animated-components/onboarding-screen>
   - <https://dribbble.com/search/oboarding>
   - <https://motion-primitives.com/docs/toolbar-expandable>
