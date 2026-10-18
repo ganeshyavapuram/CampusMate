@@ -4,12 +4,12 @@ title: See a clear error when AI is unavailable
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-018, ADR-024]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-016 — See a clear error when AI is unavailable
@@ -49,3 +49,5 @@ None.
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

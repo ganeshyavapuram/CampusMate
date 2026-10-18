@@ -4,12 +4,12 @@ title: Manage subjects
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-011, ADR-023]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-005 — Manage subjects
@@ -45,8 +45,12 @@ Not built.
 
 ## Open questions
 
-Should subjects be archived at the end of a semester rather than deleted, so old attendance and notes stay available?
+Resolved 2026-10-18: Archiving subjects is out of scope for this version and listed under Future Scope.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. No archiving in this version. Deleting a subject is enough for a one-semester project; archiving goes to Future Scope.

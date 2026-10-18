@@ -4,12 +4,12 @@ title: Mark a study session completed
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-021, ADR-020]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-013 — Mark a study session completed
@@ -33,6 +33,7 @@ Gamification awards XP when a session is finished, and the productivity report c
 - [ ] The session's status changes to "completed" on the timetable and in the weekly report.
 - [ ] The student is awarded session XP once; marking it again or reopening and re-completing it awards nothing more.
 - [ ] Completing a session counts as activity for today's streak.
+- [ ] A planned session dated before today shows a "Not marked" label, and the dashboard lists it with buttons to mark it completed or missed.
 
 ## Out of scope
 
@@ -44,8 +45,12 @@ Not built.
 
 ## Open questions
 
-Should a session that is still "planned" automatically become "missed" once its date has passed?
+Resolved 2026-10-18: Past planned sessions aren't changed automatically; they show "Not marked" and the dashboard prompts the student.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Don't change the status automatically. A planned session from a past date shows "Not marked", and the dashboard asks the student to mark it completed or missed.

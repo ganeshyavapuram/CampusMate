@@ -4,12 +4,12 @@ title: Keep a daily study streak
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-020, ADR-021]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-035 — Keep a daily study streak
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Should logging attendance or taking a quiz also count as activity?
+Resolved 2026-10-18: Only completing an assignment or a study session counts towards the streak.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. No. Only completing an assignment or a study session counts as activity.

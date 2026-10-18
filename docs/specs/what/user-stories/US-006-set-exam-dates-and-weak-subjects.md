@@ -4,12 +4,12 @@ title: Set exam dates and weak subjects
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-010]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-006 — Set exam dates and weak subjects
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Do any subjects need more than one exam date, for example a practical and a theory exam?
+Resolved 2026-10-18: One exam date per subject; separate practical or theory exams are added as separate subjects.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. One exam date per subject. A subject with a separate practical exam is added as its own subject, for example "DBMS Practical".

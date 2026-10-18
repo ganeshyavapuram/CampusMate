@@ -4,12 +4,12 @@ title: REST API conventions
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-003, ADR-011, US-023]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # ADR-025 — REST API conventions
@@ -77,3 +77,5 @@ _No amendments yet. Add each one as `### Amendment — YYYY-MM-DD: <what changed
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

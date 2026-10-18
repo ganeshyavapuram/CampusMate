@@ -368,9 +368,9 @@
       "means": "You learn two languages instead of one, and in return the AI key stays safe and the code matches the diagrams in your synopsis."
     },
     "ADR-002": {
-      "plain": "Screens are built from Angular Material's ready-made buttons, forms, tables and dialogs instead of designing each one from scratch.",
-      "analogy": "Building furniture from a flat-pack kit rather than cutting raw wood.",
-      "means": "You save weeks of design work, and the app looks like a standard Material app."
+      "plain": "Screens are built from Angular Material's ready-made buttons, forms and dialogs, then restyled with a bold CampusMate theme and smooth, playful animations so the app feels modern rather than stock.",
+      "analogy": "Buying a well-built flat-pack wardrobe and then painting it, adding new handles and lights: sturdy inside, your own style outside.",
+      "means": "You keep Material's accessibility and save weeks of building; the custom look and animations add about 3–4 days in the polish week."
     },
     "ADR-003": {
       "plain": "The back end is written in Python using FastAPI, which checks every incoming request automatically before your code runs.",

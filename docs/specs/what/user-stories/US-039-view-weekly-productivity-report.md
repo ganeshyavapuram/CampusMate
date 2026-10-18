@@ -4,12 +4,12 @@ title: View weekly productivity report
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-029]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-039 — View weekly productivity report
@@ -45,8 +45,12 @@ Not built.
 
 ## Open questions
 
-Should "focus time" be removed from synopsis §5.5, since nothing records it?
+Resolved 2026-10-18: Focus time is removed from the report and from synopsis §5.5.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Yes. Remove focus time from §5.5 of the synopsis.

@@ -4,12 +4,12 @@ title: Edit profile and delete account
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-023, ADR-014]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-003 — Edit profile and delete account
@@ -33,6 +33,7 @@ The display name comes from Google and may not be what the student wants shown. 
 - [ ] "Delete account" opens a confirmation dialog stating that all subjects, assignments, study sessions, notes, quiz attempts, attendance and rewards will be permanently removed.
 - [ ] After confirmation, no rows belonging to that user remain in any table, any stored note files are removed, and the student is signed out.
 - [ ] Signing in again with the same Google account afterwards starts as a brand-new user with no data.
+- [ ] The "Delete account" button stays disabled until the student types DELETE in the confirmation box.
 
 ## Out of scope
 
@@ -44,8 +45,12 @@ Not built.
 
 ## Open questions
 
-Should deletion wait for a grace period (for example 7 days) so an accidental deletion can be reversed?
+Resolved 2026-10-18: No grace period; the account is deleted immediately after the student types DELETE to confirm.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. No grace period. Delete straight away, but make the student type DELETE to confirm.

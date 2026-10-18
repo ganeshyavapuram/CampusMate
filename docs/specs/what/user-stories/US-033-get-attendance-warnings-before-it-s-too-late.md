@@ -4,12 +4,12 @@ title: Get attendance warnings before it's too late
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-013, ADR-020]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-033 — Get attendance warnings before it's too late
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-The synopsis says to warn when the next absence would drop below 75%, but TC-05 expects no warning at 18 of 24. Should TC-05 be updated to expect an "At risk" warning?
+Resolved 2026-10-18: TC-05 in the synopsis is updated to expect an "At risk" warning at 18 of 24.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Yes. Update TC-05 in the synopsis to expect an "At risk" warning at 18 of 24.

@@ -4,12 +4,12 @@ title: Text extraction from PDF and plain-text notes
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-005, ADR-014, US-017, US-023]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # ADR-015 — Text extraction from PDF and plain-text notes
@@ -77,3 +77,5 @@ _No amendments yet. Add each one as `### Amendment — YYYY-MM-DD: <what changed
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

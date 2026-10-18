@@ -4,12 +4,12 @@ title: Upload a note and get an AI summary
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-005, ADR-014, ADR-015, ADR-022]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-017 — Upload a note and get an AI summary
@@ -50,3 +50,5 @@ Is 10 MB the right size limit? Do students need Word (.docx) or PowerPoint (.ppt
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

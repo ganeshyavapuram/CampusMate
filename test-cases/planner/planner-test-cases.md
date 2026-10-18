@@ -53,6 +53,8 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-PLAN-31 | US-016 | System | No study sessions, summaries, quizzes or suggestions are partially saved after a failure. | | Not run |
 | TC-PLAN-32 | US-016 | System | The failed action can be retried from the same screen. | | Not run |
 | TC-PLAN-33 | US-016 | Integration | When the student has reached the daily AI request limit, a different message says so and states when the limit resets. | | Not run |
+| TC-PLAN-34 | US-010 | System | Each weak subject's total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later. | | Not run |
+| TC-PLAN-35 | US-013 | System | A planned session dated before today shows a "Not marked" label, and the dashboard lists it with buttons to mark it completed or missed. | | Not run |
 
 ## Run log
 

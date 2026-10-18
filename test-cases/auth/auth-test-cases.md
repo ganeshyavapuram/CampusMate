@@ -29,6 +29,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-AUTH-11 | US-003 | System | "Delete account" opens a confirmation dialog stating that all subjects, assignments, study sessions, notes, quiz attempts, attendance and rewards will be permanently removed. | | Not run |
 | TC-AUTH-12 | US-003 | System | After confirmation, no rows belonging to that user remain in any table, any stored note files are removed, and the student is signed out. | | Not run |
 | TC-AUTH-13 | US-003 | System | Signing in again with the same Google account afterwards starts as a brand-new user with no data. | | Not run |
+| TC-AUTH-14 | US-003 | System | The "Delete account" button stays disabled until the student types DELETE in the confirmation box. | | Not run |
 
 ## Run log
 

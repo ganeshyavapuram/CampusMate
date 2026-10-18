@@ -37,6 +37,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-ASGN-17 | US-028 | System | The dashboard shows the number of overdue assignments. | | Not run |
 | TC-ASGN-18 | US-028 | System | Completing an overdue assignment removes the label. | | Not run |
 | TC-ASGN-19 | US-028 | System | Overdue is worked out from the due date and today's date; it is never stored as a status. | | Not run |
+| TC-ASGN-20 | US-024 | System | The student can add an optional description of up to 500 characters; longer text is rejected with a message. | | Not run |
 
 ## Run log
 

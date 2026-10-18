@@ -36,6 +36,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-SUBJ-17 | US-007 | System | A slot overlapping another slot on the same weekday is rejected with a message naming the conflicting class. | | Not run |
 | TC-SUBJ-18 | US-007 | System | The student can edit and delete slots. | | Not run |
 | TC-SUBJ-19 | US-007 | System | The dashboard's "Today's classes" section lists today's slots in start-time order, using the student's time zone. | | Not run |
+| TC-SUBJ-20 | US-007 | System | Attendance percentages and warnings use only logged attendance records, never classes predicted from the timetable. | | Not run |
 
 ## Run log
 

@@ -29,7 +29,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-GAME-09 | US-036 | System | Reaching a 7-day streak unlocks the "7-Day Streak" badge. | | Not run |
 | TC-GAME-10 | US-036 | System | Each badge is earned at most once per student and stores the date it was earned. | | Not run |
 | TC-GAME-11 | US-036 | System | When a badge unlocks, a short on-screen message names it. | | Not run |
-| TC-GAME-12 | US-036 | System | The full badge list and the conditions for each are defined before this story is built. | | Not run |
+| TC-GAME-12 | US-036 | System | The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz). | | Not run |
 | TC-GAME-13 | US-037 | Unit | Level = floor(XP / 100) + 1, so 0–99 XP is level 1 and 100–199 XP is level 2. | | Not run |
 | TC-GAME-14 | US-037 | System | The profile and dashboard show the current level. | | Not run |
 | TC-GAME-15 | US-037 | System | Progress towards the next level is shown, for example "40 / 100 XP". | | Not run |

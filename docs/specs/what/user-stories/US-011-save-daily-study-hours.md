@@ -4,12 +4,12 @@ title: Save daily study hours
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-020]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-011 — Save daily study hours
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Do students need different hours on weekends and weekdays?
+Resolved 2026-10-18: One daily study-hours value applies to every day; per-weekday hours are Future Scope.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. One value for every day in this version. Separate weekday and weekend hours go to Future Scope.

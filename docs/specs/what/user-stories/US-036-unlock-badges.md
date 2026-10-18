@@ -4,12 +4,12 @@ title: Unlock badges
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-009]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-036 — Unlock badges
@@ -32,7 +32,7 @@ Badges give medium-term goals that XP alone doesn't. The synopsis names only one
 - [ ] Reaching a 7-day streak unlocks the "7-Day Streak" badge.
 - [ ] Each badge is earned at most once per student and stores the date it was earned.
 - [ ] When a badge unlocks, a short on-screen message names it.
-- [ ] The full badge list and the conditions for each are defined before this story is built.
+- [ ] The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz).
 
 ## Out of scope
 
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Which badges beyond "7-Day Streak" should exist (for example first completed assignment, 10 assignments completed, a perfect quiz score)?
+Resolved 2026-10-18: Badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Four badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.

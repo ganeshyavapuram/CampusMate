@@ -134,6 +134,12 @@ def adr_card(path):
 </article>'''
 
 
+def summary(n_q, n_prop):
+    q = f"{n_q} {'story still has' if n_q == 1 else 'stories still have'} an open question"
+    p = f"{n_prop} {'decision is' if n_prop == 1 else 'decisions are'} still proposed"
+    return f"{q} and {p}. Those need the most attention." if n_q or n_prop else "Every story and decision has been reviewed and has no open questions."
+
+
 def build():
     us_files = {p.name[:6]: p for p in specs.all_files("US")}
     adr_files = {p.name[:7]: p for p in specs.all_files("ADR")}
@@ -161,7 +167,7 @@ def build():
         "{{NAV_US}}": nav(SCENES["story_areas"]), "{{NAV_ADR}}": nav(SCENES["adr_areas"]),
         "{{US_SECTIONS}}": us_html, "{{ADR_SECTIONS}}": adr_html,
         "{{N_US}}": str(len(us_files)), "{{N_ADR}}": str(len(adr_files)),
-        "{{N_Q}}": str(n_q), "{{N_PROP}}": str(n_prop), "{{N_ALL}}": str(len(us_files) + len(adr_files)),
+        "{{SUMMARY}}": summary(n_q, n_prop), "{{N_ALL}}": str(len(us_files) + len(adr_files)),
     }.items():
         page = page.replace(k, v)
     return page

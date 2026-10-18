@@ -4,12 +4,12 @@ title: AI request handling with timeout, validation and fallback
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-005, ADR-008, ADR-010, ADR-024, US-016]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # ADR-018 — AI request handling with timeout, validation and fallback
@@ -79,3 +79,5 @@ _No amendments yet. Add each one as `### Amendment — YYYY-MM-DD: <what changed
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

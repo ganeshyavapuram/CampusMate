@@ -4,12 +4,12 @@ title: Add an assignment
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-011]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-024 — Add an assignment
@@ -33,6 +33,7 @@ Assignment announcements arrive in messaging groups where they get buried (synop
 - [ ] A due date before today is rejected with a message, and nothing is saved (TC-03).
 - [ ] A new assignment has status "pending" and appears in the assignment list sorted by due date.
 - [ ] It also appears in the dashboard's pending assignments.
+- [ ] The student can add an optional description of up to 500 characters; longer text is rejected with a message.
 
 ## Out of scope
 
@@ -44,8 +45,12 @@ Not built.
 
 ## Open questions
 
-Do assignments need a description field, and a due time as well as a date?
+Resolved 2026-10-18: Assignments get an optional description (needs a description column on Assignment); due dates stay date-only.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Add an optional description of up to 500 characters. Keep due dates as dates only, since course deadlines are given as dates.

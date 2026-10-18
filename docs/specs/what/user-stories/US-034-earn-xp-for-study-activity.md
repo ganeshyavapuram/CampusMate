@@ -4,12 +4,12 @@ title: Earn XP for study activity
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-021]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-034 — Earn XP for study activity
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Are 20 and 10 XP the right values? Should passing a quiz also award XP?
+Resolved 2026-10-18: 20 XP per completed assignment, 10 XP per completed study session, none for quizzes.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Keep 20 XP per assignment and 10 XP per study session, with no XP for quizzes (see US-019).

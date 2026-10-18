@@ -186,7 +186,7 @@ footer { color: var(--muted); font-size: 14px; }
     <div><b>4. Decide</b>Approve, ask for changes, or reject, and add a note. Where a story has an open question, accept our recommendation or leave a note with your own answer.</div>
     <div><b>5. Sync</b>Ask Claude to <i>sync the storyboard</i>. Your decisions and accepted recommendations are written into the story and decision files in the repository, and the "In repo" label updates.</div>
   </div>
-  <p class="lede" style="font-size:16px">19 stories still have an open question and 18 decisions are new choices that aren't in the synopsis yet. Those need the most attention.</p>
+  <p class="lede" style="font-size:16px">1 story still has an open question and 1 decision is still proposed. Those need the most attention.</p>
 </section>
 
 <div class="toolbar">
@@ -205,8 +205,8 @@ footer { color: var(--muted); font-size: 14px; }
 </div>
 
 <div class="part-head"><span class="kicker">Part one</span><h2>User stories: what Priya can do</h2><p>Each story is a capability CampusMate must have. Approving a story means "yes, build this, and these checks prove it works".</p></div>
-<section class="area" id="area-start"><div class="area-head"><span class="scene-no">Scene 1</span><h2>Getting started</h2><p>Priya&#x27;s first five minutes: signing in, setting up and staying in control of her account.</p></div><article class="card" id="US-001" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-001</span><h3>Sign in with Google</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-001">Not reviewed</span></header>
+<section class="area" id="area-start"><div class="area-head"><span class="scene-no">Scene 1</span><h2>Getting started</h2><p>Priya&#x27;s first five minutes: signing in, setting up and staying in control of her account.</p></div><article class="card" id="US-001" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-001</span><h3>Sign in with Google</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-001">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya opens CampusMate on the family laptop, taps &quot;Sign in with Google&quot; and lands on her dashboard. No new password to invent or forget.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like walking into the college library with the ID card you already have, instead of applying for a separate library pass.</p></div>
@@ -228,8 +228,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-002" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-002</span><h3>Sign out</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-002">Not reviewed</span></header>
+<article class="card" id="US-002" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-002</span><h3>Sign out</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-002">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya finishes revising on a study-centre computer and taps &quot;Sign out&quot;. The next student who sits down sees only the login screen.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like locking your locker before you leave the library.</p></div>
@@ -251,21 +251,21 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-003" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-003</span><h3>Edit profile and delete account</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-003">Not reviewed</span></header>
+<article class="card" id="US-003" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-003</span><h3>Edit profile and delete account</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-003">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya changes &quot;Priya S&quot; to &quot;Priya Sharma&quot;. After graduating, she deletes her account and every note, plan and mark is gone.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like handing back your hostel room key: you change the name on the door while you live there, and you clear everything out when you leave.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>The display name comes from Google and may not be what the student wants shown. A student who stops using the app has no way today to remove their notes, attendance and plans, which is a privacy gap once notes have been uploaded.</p></div>
 </div>
 <p class="formal">As a student, I want to change my display name and to delete my account with all its data, so that I control how I appear and what CampusMate keeps about me.</p>
-<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>The profile screen lets the student change their display name; names of 1 to 100 characters are saved, and an empty name is rejected with a message.</li><li>&quot;Delete account&quot; opens a confirmation dialog stating that all subjects, assignments, study sessions, notes, quiz attempts, attendance and rewards will be permanently removed.</li><li>After confirmation, no rows belonging to that user remain in any table, any stored note files are removed, and the student is signed out.</li><li>Signing in again with the same Google account afterwards starts as a brand-new user with no data.</li></ul>
+<details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The profile screen lets the student change their display name; names of 1 to 100 characters are saved, and an empty name is rejected with a message.</li><li>&quot;Delete account&quot; opens a confirmation dialog stating that all subjects, assignments, study sessions, notes, quiz attempts, attendance and rewards will be permanently removed.</li><li>After confirmation, no rows belonging to that user remain in any table, any stored note files are removed, and the student is signed out.</li><li>Signing in again with the same Google account afterwards starts as a brand-new user with no data.</li><li>The &quot;Delete account&quot; button stays disabled until the student types DELETE in the confirmation box.</li></ul>
 <p class="oos"><strong>Not included:</strong> Exporting data before deletion, an undo or grace period, and deleting the Google account itself.</p></details>
-<div class="question" data-rec="US-003" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should deletion wait for a grace period (for example 7 days) so an accidental deletion can be reversed?</p>
+<div class="question resolved" data-rec="US-003" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: No grace period; the account is deleted immediately after the student types DELETE to confirm.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>No grace period. Delete straight away, but make the student type DELETE to confirm.</p><p class="rec-why">A typed confirmation stops accidental deletions without the extra work of scheduled deletion jobs.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: The &quot;Delete account&quot; button stays disabled until the student types DELETE in the confirmation box.</li><li>Closes the question as: No grace period; the account is deleted immediately after the student types DELETE to confirm.</li></ul><button type="button" class="accept" data-accept="US-003" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: The &quot;Delete account&quot; button stays disabled until the student types DELETE in the confirmation box.</li><li>Closes the question as: No grace period; the account is deleted immediately after the student types DELETE to confirm.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-023">ADR-023</a> <a class="ref" href="#ADR-014">ADR-014</a></p>
 <div class="review" data-id="US-003">
@@ -279,8 +279,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-004" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-004</span><h3>Complete first-time setup</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-004">Not reviewed</span></header>
+<article class="card" id="US-004" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-004</span><h3>Complete first-time setup</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-004">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>On her very first visit, CampusMate asks for her five subjects and how many hours she can study each day, so her dashboard isn&#x27;t an empty page.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like the first page of a new diary, where you write your timetable before anything else.</p></div>
@@ -301,8 +301,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-004" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-subjects"><div class="area-head"><span class="scene-no">Scene 2</span><h2>Subjects and timetable</h2><p>The foundation everything else hangs on: what Priya studies, when her exams are, and when her classes run.</p></div><article class="card" id="US-005" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-005</span><h3>Manage subjects</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-005">Not reviewed</span></header>
+</article></section><section class="area" id="area-subjects"><div class="area-head"><span class="scene-no">Scene 2</span><h2>Subjects and timetable</h2><p>The foundation everything else hangs on: what Priya studies, when her exams are, and when her classes run.</p></div><article class="card" id="US-005" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-005</span><h3>Manage subjects</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-005">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya adds &quot;DBMS&quot;, fixes the typo in &quot;Cumputer Networks&quot;, and deletes an elective she dropped, along with its old assignments.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Subjects are the folders in your school bag. Every assignment, note and attendance mark goes inside one.</p></div>
@@ -311,11 +311,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want to add, rename and delete my subjects, so that my assignments, notes, plans and attendance are organised by subject.</p>
 <details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The student can add a subject with a name of 1 to 100 characters.</li><li>Adding a second subject with the same name (ignoring case) is rejected with a message.</li><li>The student can rename a subject, and the new name appears everywhere it is used.</li><li>Deleting a subject shows a confirmation that states how many assignments, notes, study sessions and attendance records will also be removed.</li><li>After confirming, the subject and all those records are gone, and none of them appear on any screen or report.</li></ul>
 <p class="oos"><strong>Not included:</strong> A shared subject catalogue, semesters, and archiving subjects instead of deleting them.</p></details>
-<div class="question" data-rec="US-005" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should subjects be archived at the end of a semester rather than deleted, so old attendance and notes stay available?</p>
+<div class="question resolved" data-rec="US-005" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Archiving subjects is out of scope for this version and listed under Future Scope.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>No archiving in this version. Deleting a subject is enough for a one-semester project; archiving goes to Future Scope.</p><p class="rec-why">Archiving touches every list and report, which is a lot of work for little benefit within one semester.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Archiving subjects is out of scope for this version and listed under Future Scope.</li></ul><button type="button" class="accept" data-accept="US-005" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Archiving subjects is out of scope for this version and listed under Future Scope.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-011">ADR-011</a> <a class="ref" href="#ADR-023">ADR-023</a></p>
 <div class="review" data-id="US-005">
@@ -329,8 +329,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-006" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-006</span><h3>Set exam dates and weak subjects</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-006">Not reviewed</span></header>
+<article class="card" id="US-006" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-006</span><h3>Set exam dates and weak subjects</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-006">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya sets her DBMS exam for 12 December and marks Maths as a weak subject. The dashboard now says &quot;DBMS exam in 9 days&quot;.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like circling exam dates in red on the wall calendar and putting a star next to the subject you find hardest.</p></div>
@@ -339,11 +339,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want to set each subject&#x27;s exam date and mark subjects I find difficult, so that my study plan and dashboard focus on what is coming up and what I struggle with.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>The student can set, change and clear an exam date for each subject.</li><li>An exam date before today is rejected with a message.</li><li>The student can toggle a subject&#x27;s weak flag, and weak subjects show a visible &quot;Weak&quot; label in the subject list and planner form.</li><li>The dashboard&#x27;s &quot;Upcoming exams&quot; section lists subjects with an exam in the next 30 days, soonest first, with the number of days remaining.</li></ul>
 <p class="oos"><strong>Not included:</strong> More than one exam per subject (mid-term and final), and exam times or venues.</p></details>
-<div class="question" data-rec="US-006" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Do any subjects need more than one exam date, for example a practical and a theory exam?</p>
+<div class="question resolved" data-rec="US-006" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: One exam date per subject; separate practical or theory exams are added as separate subjects.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>One exam date per subject. A subject with a separate practical exam is added as its own subject, for example &quot;DBMS Practical&quot;.</p><p class="rec-why">This keeps the data model as it is while still covering theory and practical exams.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: One exam date per subject; separate practical or theory exams are added as separate subjects.</li></ul><button type="button" class="accept" data-accept="US-006" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: One exam date per subject; separate practical or theory exams are added as separate subjects.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-010">ADR-010</a></p>
 <div class="review" data-id="US-006">
@@ -357,21 +357,21 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-007" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-007</span><h3>Enter weekly class timetable</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-007">Not reviewed</span></header>
+<article class="card" id="US-007" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-007</span><h3>Enter weekly class timetable</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-007">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya enters her counselling sessions: DBMS every Monday and Wednesday, 6 to 7 pm. On Monday the dashboard shows them under &quot;Today&#x27;s classes&quot;.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like the class timetable pinned on the noticeboard. The app needs its own copy to know what &quot;today&quot; looks like.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>The synopsis shows &quot;today&#x27;s classes&quot; on the dashboard but never collects the timetable, so that section would always be empty. Students currently keep timetables in a separate calendar app that knows nothing about attendance.</p></div>
 </div>
 <p class="formal">As a student, I want to enter my weekly class timetable, so that the dashboard shows today&#x27;s classes and attendance can warn me based on the classes still to come.</p>
-<details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The student can add a class slot with a subject, weekday, start time and end time.</li><li>A slot whose end time is not after its start time is rejected with a message.</li><li>A slot overlapping another slot on the same weekday is rejected with a message naming the conflicting class.</li><li>The student can edit and delete slots.</li><li>The dashboard&#x27;s &quot;Today&#x27;s classes&quot; section lists today&#x27;s slots in start-time order, using the student&#x27;s time zone.</li></ul>
+<details><summary>How we'll know it works (6 checks)</summary><ul class="checks"><li>The student can add a class slot with a subject, weekday, start time and end time.</li><li>A slot whose end time is not after its start time is rejected with a message.</li><li>A slot overlapping another slot on the same weekday is rejected with a message naming the conflicting class.</li><li>The student can edit and delete slots.</li><li>The dashboard&#x27;s &quot;Today&#x27;s classes&quot; section lists today&#x27;s slots in start-time order, using the student&#x27;s time zone.</li><li>Attendance percentages and warnings use only logged attendance records, never classes predicted from the timetable.</li></ul>
 <p class="oos"><strong>Not included:</strong> One-off changes (cancelled or extra classes, holidays), non-weekly patterns, and importing a timetable from a university portal (synopsis §10).</p></details>
-<div class="question" data-rec="US-007" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>How should holidays and cancelled classes be handled, given that attendance warnings depend on future classes?</p>
+<div class="question resolved" data-rec="US-007" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Holidays aren&#x27;t modelled; warnings use logged attendance only, and the timetable is used for today&#x27;s classes and the next class date.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Don&#x27;t model holidays. Attendance warnings use only classes the student has logged; the timetable only shows today&#x27;s classes and the next class date.</p><p class="rec-why">Predicting future classes needs a holiday calendar the app doesn&#x27;t have. Using logged classes keeps warnings correct.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: Attendance percentages and warnings use only logged attendance records, never classes predicted from the timetable.</li><li>Closes the question as: Holidays aren&#x27;t modelled; warnings use logged attendance only, and the timetable is used for today&#x27;s classes and the next class date.</li></ul><button type="button" class="accept" data-accept="US-007" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: Attendance percentages and warnings use only logged attendance records, never classes predicted from the timetable.</li><li>Closes the question as: Holidays aren&#x27;t modelled; warnings use logged attendance only, and the timetable is used for today&#x27;s classes and the next class date.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-020">ADR-020</a></p>
 <div class="review" data-id="US-007">
@@ -384,8 +384,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-007" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-dashboard"><div class="area-head"><span class="scene-no">Scene 3</span><h2>The daily dashboard</h2><p>The one screen Priya opens every morning.</p></div><article class="card" id="US-008" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-008</span><h3>View daily dashboard</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-008">Not reviewed</span></header>
+</article></section><section class="area" id="area-dashboard"><div class="area-head"><span class="scene-no">Scene 3</span><h2>The daily dashboard</h2><p>The one screen Priya opens every morning.</p></div><article class="card" id="US-008" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-008</span><h3>View daily dashboard</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-008">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Each morning Priya opens one screen: two classes today, a DBMS assignment due tomorrow, Maths exam in 9 days, Networks attendance at risk, and a 5-day streak.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a car dashboard: fuel, speed and warning lights in one glance, without opening the bonnet.</p></div>
@@ -407,8 +407,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-009" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-009</span><h3>Get a daily AI study suggestion</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-009">Not reviewed</span></header>
+<article class="card" id="US-009" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-009</span><h3>Get a daily AI study suggestion</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-009">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Her dashboard says: &quot;Revise normalisation in DBMS for 45 minutes. Your exam is in 9 days.&quot; It says the same thing all day, and something new tomorrow.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a tutor who leaves you one sticky note each morning instead of giving a lecture.</p></div>
@@ -429,21 +429,21 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-009" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-planner"><div class="area-head"><span class="scene-no">Scene 4</span><h2>Smart planner</h2><p>Turning exams, weak subjects and spare hours into a study plan that adapts when life gets in the way.</p></div><article class="card" id="US-010" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-010</span><h3>Generate an AI study timetable</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-010">Not reviewed</span></header>
+</article></section><section class="area" id="area-planner"><div class="area-head"><span class="scene-no">Scene 4</span><h2>Smart planner</h2><p>Turning exams, weak subjects and spare hours into a study plan that adapts when life gets in the way.</p></div><article class="card" id="US-010" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-010</span><h3>Generate an AI study timetable</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-010">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya says she has 2 hours a day. CampusMate builds a plan from today to her last exam, giving Maths extra time.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a GPS planning the route to your exam date, given how much fuel (time) you have each day.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>Calendar apps know nothing about exams or weak subjects, so students either plan revision by hand or not at all. Planning is where students with no day-to-day supervision struggle most, and it is the main AI feature of CampusMate.</p></div>
 </div>
 <p class="formal">As a student, I want an AI-generated study timetable based on my subjects, weak areas, exam dates and daily study hours, so that I have a realistic revision plan without building one by hand.</p>
-<details><summary>How we'll know it works (6 checks)</summary><ul class="checks"><li>The planner form is pre-filled with the student&#x27;s subjects, weak flags, exam dates and saved daily study hours.</li><li>Generating a plan creates study sessions with status &quot;planned&quot; from today up to the latest exam date.</li><li>No day&#x27;s planned sessions add up to more than the student&#x27;s daily study hours.</li><li>No session for a subject is scheduled after that subject&#x27;s exam date.</li><li>Every subject with a future exam date has at least one session.</li><li>If the AI response breaks any of these rules or the AI is unavailable, a clear error is shown and no sessions are saved (TC-08).</li></ul>
+<details><summary>How we'll know it works (7 checks)</summary><ul class="checks"><li>The planner form is pre-filled with the student&#x27;s subjects, weak flags, exam dates and saved daily study hours.</li><li>Generating a plan creates study sessions with status &quot;planned&quot; from today up to the latest exam date.</li><li>No day&#x27;s planned sessions add up to more than the student&#x27;s daily study hours.</li><li>No session for a subject is scheduled after that subject&#x27;s exam date.</li><li>Every subject with a future exam date has at least one session.</li><li>If the AI response breaks any of these rules or the AI is unavailable, a clear error is shown and no sessions are saved (TC-08).</li><li>Each weak subject&#x27;s total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later.</li></ul>
 <p class="oos"><strong>Not included:</strong> Time-of-day scheduling (sessions are dated, not timed), avoiding class times, manual drag-and-drop editing, and syncing to Google Calendar.</p></details>
-<div class="question" data-rec="US-010" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>What measurable rule defines &quot;more time for weak subjects&quot; (for example, at least 1.5 times the minutes of a non-weak subject with the same exam date) so it can be tested?</p>
+<div class="question resolved" data-rec="US-010" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Weak subjects get at least 1.5 times the minutes of non-weak subjects with the same or a later exam date.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Use a 1.5× rule: each weak subject gets at least 1.5 times the total minutes of every non-weak subject with the same or a later exam date.</p><p class="rec-why">A number makes the rule testable, and the planner can reject an AI plan that breaks it.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: Each weak subject&#x27;s total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later.</li><li>Closes the question as: Weak subjects get at least 1.5 times the minutes of non-weak subjects with the same or a later exam date.</li></ul><button type="button" class="accept" data-accept="US-010" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: Each weak subject&#x27;s total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later.</li><li>Closes the question as: Weak subjects get at least 1.5 times the minutes of non-weak subjects with the same or a later exam date.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-005">ADR-005</a> <a class="ref" href="#ADR-010">ADR-010</a> <a class="ref" href="#ADR-018">ADR-018</a> <a class="ref" href="#ADR-024">ADR-024</a></p>
 <div class="review" data-id="US-010">
@@ -457,8 +457,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-011" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-011</span><h3>Save daily study hours</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-011">Not reviewed</span></header>
+<article class="card" id="US-011" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-011</span><h3>Save daily study hours</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-011">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya set &quot;2 hours a day&quot; once. Next week, when she regenerates her plan, the form already says 2.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like your phone remembering your home address so you don&#x27;t type it every time you book a cab.</p></div>
@@ -467,11 +467,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want my daily study hours to be saved, so that I don&#x27;t re-enter them every time I generate or adjust a plan.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>The student can set daily study hours between 0.5 and 12, in steps of 0.5.</li><li>Values outside that range are rejected with a message.</li><li>The saved value pre-fills the planner form on later visits, including after signing out and back in.</li><li>Changing the value does not alter the existing plan until the student regenerates it (US-015).</li></ul>
 <p class="oos"><strong>Not included:</strong> Different hours for different weekdays.</p></details>
-<div class="question" data-rec="US-011" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Do students need different hours on weekends and weekdays?</p>
+<div class="question resolved" data-rec="US-011" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: One daily study-hours value applies to every day; per-weekday hours are Future Scope.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>One value for every day in this version. Separate weekday and weekend hours go to Future Scope.</p><p class="rec-why">A single number keeps the planner form and the AI prompt simple.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: One daily study-hours value applies to every day; per-weekday hours are Future Scope.</li></ul><button type="button" class="accept" data-accept="US-011" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: One daily study-hours value applies to every day; per-weekday hours are Future Scope.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-020">ADR-020</a></p>
 <div class="review" data-id="US-011">
@@ -485,8 +485,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-012" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-012</span><h3>View weekly study timetable</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-012">Not reviewed</span></header>
+<article class="card" id="US-012" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-012</span><h3>View weekly study timetable</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-012">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya opens the timetable and sees Monday to Sunday: today highlighted, finished sessions marked done, the one she missed marked missed.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The weekly spread in a paper planner.</p></div>
@@ -508,21 +508,21 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-013" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-013</span><h3>Mark a study session completed</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-013">Not reviewed</span></header>
+<article class="card" id="US-013" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-013</span><h3>Mark a study session completed</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-013">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>After 45 minutes on DBMS, Priya ticks the session done. It turns green and she earns 10 XP.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Ticking a box on your to-do list, and getting a gold star for it.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>Gamification awards XP when a session is finished, and the productivity report counts study hours, but the synopsis has no way to record completion. Without it the planner has no feedback and rewards never trigger.</p></div>
 </div>
 <p class="formal">As a student, I want to mark a study session as completed, so that my progress is tracked and I earn XP for studying.</p>
-<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>A planned session dated today or earlier can be marked completed; a future-dated session cannot.</li><li>The session&#x27;s status changes to &quot;completed&quot; on the timetable and in the weekly report.</li><li>The student is awarded session XP once; marking it again or reopening and re-completing it awards nothing more.</li><li>Completing a session counts as activity for today&#x27;s streak.</li></ul>
+<details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>A planned session dated today or earlier can be marked completed; a future-dated session cannot.</li><li>The session&#x27;s status changes to &quot;completed&quot; on the timetable and in the weekly report.</li><li>The student is awarded session XP once; marking it again or reopening and re-completing it awards nothing more.</li><li>Completing a session counts as activity for today&#x27;s streak.</li><li>A planned session dated before today shows a &quot;Not marked&quot; label, and the dashboard lists it with buttons to mark it completed or missed.</li></ul>
 <p class="oos"><strong>Not included:</strong> A study timer, and recording actual minutes studied when they differ from the planned duration.</p></details>
-<div class="question" data-rec="US-013" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should a session that is still &quot;planned&quot; automatically become &quot;missed&quot; once its date has passed?</p>
+<div class="question resolved" data-rec="US-013" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Past planned sessions aren&#x27;t changed automatically; they show &quot;Not marked&quot; and the dashboard prompts the student.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Don&#x27;t change the status automatically. A planned session from a past date shows &quot;Not marked&quot;, and the dashboard asks the student to mark it completed or missed.</p><p class="rec-why">Automatic changes would trigger re-plans the student didn&#x27;t ask for and use AI requests.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: A planned session dated before today shows a &quot;Not marked&quot; label, and the dashboard lists it with buttons to mark it completed or missed.</li><li>Closes the question as: Past planned sessions aren&#x27;t changed automatically; they show &quot;Not marked&quot; and the dashboard prompts the student.</li></ul><button type="button" class="accept" data-accept="US-013" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: A planned session dated before today shows a &quot;Not marked&quot; label, and the dashboard lists it with buttons to mark it completed or missed.</li><li>Closes the question as: Past planned sessions aren&#x27;t changed automatically; they show &quot;Not marked&quot; and the dashboard prompts the student.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-021">ADR-021</a> <a class="ref" href="#ADR-020">ADR-020</a></p>
 <div class="review" data-id="US-013">
@@ -536,8 +536,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-014" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-014</span><h3>Mark a session missed and reschedule</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-014">Not reviewed</span></header>
+<article class="card" id="US-014" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-014</span><h3>Mark a session missed and reschedule</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-014">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Her shift ran late and she missed Thursday&#x27;s Maths session. She marks it missed, and the rest of the week reshuffles to fit it back in.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like GPS recalculating when you miss a turn, instead of telling you to drive back to where you went wrong.</p></div>
@@ -559,8 +559,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-015" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-015</span><h3>Regenerate the study plan</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-015">Not reviewed</span></header>
+<article class="card" id="US-015" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-015</span><h3>Regenerate the study plan</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-015">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The DBMS exam moves from 12 to 20 December. Priya taps &quot;Regenerate plan&quot; and her sessions spread out over the extra week.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Re-planning a trip when the train date changes.</p></div>
@@ -582,8 +582,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-016" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-016</span><h3>See a clear error when AI is unavailable</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-016">Not reviewed</span></header>
+<article class="card" id="US-016" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-016</span><h3>See a clear error when AI is unavailable</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-016">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The AI is overloaded. Priya sees &quot;The AI service is unavailable, try again later&quot;, and her existing plan is untouched.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like an ATM that shows &quot;Out of service&quot; instead of swallowing your card and giving you no cash.</p></div>
@@ -604,8 +604,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-016" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-notes"><div class="area-head"><span class="scene-no">Scene 5</span><h2>AI notes and quizzes</h2><p>Turning a pile of PDFs into summaries and self-tests.</p></div><article class="card" id="US-017" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-017</span><h3>Upload a note and get an AI summary</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-017">Not reviewed</span></header>
+</article></section><section class="area" id="area-notes"><div class="area-head"><span class="scene-no">Scene 5</span><h2>AI notes and quizzes</h2><p>Turning a pile of PDFs into summaries and self-tests.</p></div><article class="card" id="US-017" data-kind="story" data-q="1" data-repo="approved">
+<header class="card-head"><span class="id">US-017</span><h3>Upload a note and get an AI summary</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-017">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya uploads a 20-page DBMS PDF and gets a one-page summary of the key points a moment later.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a friend who reads the whole chapter and gives you the key points on one page.</p></div>
@@ -632,21 +632,21 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-018" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-018</span><h3>Generate a quiz from a note</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-018">Not reviewed</span></header>
+<article class="card" id="US-018" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-018</span><h3>Generate a quiz from a note</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-018">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>From the same PDF, CampusMate writes 8 multiple-choice questions about normalisation and keys.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a friend who quizzes you from your own notes the night before an exam.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>Self-testing is more effective than rereading, but writing questions takes time students don&#x27;t have. General chatbots can do it but aren&#x27;t linked to the student&#x27;s notes or progress.</p></div>
 </div>
 <p class="formal">As a student, I want a multiple-choice quiz generated from each note I upload, so that I can test myself on my own material.</p>
-<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Each successfully processed note has a quiz of 5 to 10 multiple-choice questions.</li><li>Every question has exactly four options and exactly one correct answer.</li><li>The quiz is saved with the note and shown again without a new AI request.</li><li>A quiz response that doesn&#x27;t meet these rules is rejected and nothing is saved (US-016).</li></ul>
+<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Each successfully processed note has a quiz of exactly 8 multiple-choice questions.</li><li>Every question has exactly four options and exactly one correct answer.</li><li>The quiz is saved with the note and shown again without a new AI request.</li><li>A quiz response that doesn&#x27;t meet these rules is rejected and nothing is saved (US-016).</li></ul>
 <p class="oos"><strong>Not included:</strong> True/false, fill-in-the-blank or short-answer questions, and choosing difficulty.</p></details>
-<div class="question" data-rec="US-018" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should the student choose the number of questions, or is a fixed number fine?</p>
+<div class="question resolved" data-rec="US-018" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Every quiz has exactly 8 questions.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>A fixed 8 questions per quiz.</p><p class="rec-why">A fixed size keeps AI requests small, makes scores comparable between attempts, and is easy to test.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Changes the check to: Each successfully processed note has a quiz of exactly 8 multiple-choice questions.</li><li>Closes the question as: Every quiz has exactly 8 questions.</li></ul><button type="button" class="accept" data-accept="US-018" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Changes the check to: Each successfully processed note has a quiz of exactly 8 multiple-choice questions.</li><li>Closes the question as: Every quiz has exactly 8 questions.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-008">ADR-008</a> <a class="ref" href="#ADR-018">ADR-018</a></p>
 <div class="review" data-id="US-018">
@@ -660,8 +660,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-019" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-019</span><h3>Take a quiz and see my score</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-019">Not reviewed</span></header>
+<article class="card" id="US-019" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-019</span><h3>Take a quiz and see my score</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-019">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya answers the 8 questions, scores 6 out of 8, and sees the correct answer for the two she got wrong.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A practice test that is marked the moment you hand it in.</p></div>
@@ -670,11 +670,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want to answer the quiz in the app and see my score, so that I know how well I understand the material.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>The student can select one option per question and submit the quiz.</li><li>Submitting with unanswered questions asks for confirmation; unanswered questions count as wrong.</li><li>After submitting, the score is shown as &quot;correct / total&quot; and each question shows the correct answer.</li><li>Each submitted attempt is saved with its score and date.</li></ul>
 <p class="oos"><strong>Not included:</strong> Timed quizzes, sharing scores, and leaderboards (synopsis §8).</p></details>
-<div class="question" data-rec="US-019" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should completing a quiz award XP?</p>
+<div class="question resolved" data-rec="US-019" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Quizzes don&#x27;t award XP in this version.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>No XP for quizzes in this version.</p><p class="rec-why">Quizzes can be retaken any number of times, so quiz XP would be easy to farm. XP stays tied to assignments and study sessions.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Quizzes don&#x27;t award XP in this version.</li></ul><button type="button" class="accept" data-accept="US-019" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Quizzes don&#x27;t award XP in this version.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-008">ADR-008</a></p>
 <div class="review" data-id="US-019">
@@ -688,8 +688,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-020" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-020</span><h3>View past quiz scores</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-020">Not reviewed</span></header>
+<article class="card" id="US-020" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-020</span><h3>View past quiz scores</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-020">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>On the DBMS note, Priya sees her scores go from 4/8 to 6/8 to 8/8 over a week.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like the marks on your report cards across a term, showing you improving.</p></div>
@@ -711,8 +711,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-021" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-021</span><h3>Browse, search and delete notes</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-021">Not reviewed</span></header>
+<article class="card" id="US-021" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-021</span><h3>Browse, search and delete notes</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-021">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya types &quot;normal&quot; in the search box and finds &quot;Normalisation notes&quot; among 30 uploads. She deletes an old draft she no longer needs.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A library catalogue instead of a pile of photocopies on your desk.</p></div>
@@ -734,8 +734,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-022" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-022</span><h3>Regenerate a summary or quiz</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-022">Not reviewed</span></header>
+<article class="card" id="US-022" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-022</span><h3>Regenerate a summary or quiz</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-022">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The summary skipped the topic Priya cared about. She taps &quot;Regenerate summary&quot; and gets a better one; her old quiz scores stay.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Asking a friend to explain it again, a different way.</p></div>
@@ -757,8 +757,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-023" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-023</span><h3>Reject invalid uploads</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-023">Not reviewed</span></header>
+<article class="card" id="US-023" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-023</span><h3>Reject invalid uploads</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-023">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya tries to upload a Word file. CampusMate tells her straight away it accepts PDF and text files only.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a vending machine that hands back a foreign coin and shows which coins it takes.</p></div>
@@ -779,21 +779,21 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-023" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-assignments"><div class="area-head"><span class="scene-no">Scene 6</span><h2>Assignments</h2><p>Getting deadlines out of the WhatsApp group and into one list.</p></div><article class="card" id="US-024" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-024</span><h3>Add an assignment</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-024">Not reviewed</span></header>
+</article></section><section class="area" id="area-assignments"><div class="area-head"><span class="scene-no">Scene 6</span><h2>Assignments</h2><p>Getting deadlines out of the WhatsApp group and into one list.</p></div><article class="card" id="US-024" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-024</span><h3>Add an assignment</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-024">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The WhatsApp group announces &quot;DBMS assignment due 30 Nov&quot;. Priya adds it to CampusMate in ten seconds.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Writing the deadline in your diary instead of trusting the group chat to remind you.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>Assignment announcements arrive in messaging groups where they get buried (synopsis §2.3). Recording them in one place with due dates is the basis for reminders and reports.</p></div>
 </div>
 <p class="formal">As a student, I want to add an assignment with its subject and due date, so that I stop missing deadlines buried in chat groups.</p>
-<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>The student can add an assignment with a title of 1 to 150 characters, a subject and a due date.</li><li>A due date before today is rejected with a message, and nothing is saved (TC-03).</li><li>A new assignment has status &quot;pending&quot; and appears in the assignment list sorted by due date.</li><li>It also appears in the dashboard&#x27;s pending assignments.</li></ul>
+<details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The student can add an assignment with a title of 1 to 150 characters, a subject and a due date.</li><li>A due date before today is rejected with a message, and nothing is saved (TC-03).</li><li>A new assignment has status &quot;pending&quot; and appears in the assignment list sorted by due date.</li><li>It also appears in the dashboard&#x27;s pending assignments.</li><li>The student can add an optional description of up to 500 characters; longer text is rejected with a message.</li></ul>
 <p class="oos"><strong>Not included:</strong> Attachments, submitting work to the university, and a due time of day.</p></details>
-<div class="question" data-rec="US-024" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Do assignments need a description field, and a due time as well as a date?</p>
+<div class="question resolved" data-rec="US-024" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Assignments get an optional description (needs a description column on Assignment); due dates stay date-only.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Add an optional description of up to 500 characters. Keep due dates as dates only, since course deadlines are given as dates.</p><p class="rec-why">A description holds instructions copied from the group chat; a due time adds time-zone complexity for little gain.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: The student can add an optional description of up to 500 characters; longer text is rejected with a message.</li><li>Closes the question as: Assignments get an optional description (needs a description column on Assignment); due dates stay date-only.</li></ul><button type="button" class="accept" data-accept="US-024" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Adds the check: The student can add an optional description of up to 500 characters; longer text is rejected with a message.</li><li>Closes the question as: Assignments get an optional description (needs a description column on Assignment); due dates stay date-only.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-011">ADR-011</a></p>
 <div class="review" data-id="US-024">
@@ -807,8 +807,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-025" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-025</span><h3>Edit and delete assignments</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-025">Not reviewed</span></header>
+<article class="card" id="US-025" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-025</span><h3>Edit and delete assignments</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-025">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The deadline is extended to 5 December. Priya edits the date instead of deleting and re-adding the assignment.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Correcting the date in your diary, rather than starting a new diary.</p></div>
@@ -830,8 +830,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-026" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-026</span><h3>Mark an assignment completed</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-026">Not reviewed</span></header>
+<article class="card" id="US-026" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-026</span><h3>Mark an assignment completed</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-026">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya submits her assignment and marks it done: +20 XP. She reopens it by accident and completes it again, and gets no extra XP.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Stamping &quot;Submitted&quot; on your assignment. One submission gets one stamp.</p></div>
@@ -853,8 +853,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-027" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-027</span><h3>Highlight assignments due soon</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-027">Not reviewed</span></header>
+<article class="card" id="US-027" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-027</span><h3>Highlight assignments due soon</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-027">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The assignment due tomorrow carries a &quot;Due soon&quot; tag on her dashboard.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A yellow highlighter on the urgent line in your diary.</p></div>
@@ -863,11 +863,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want assignments due today or tomorrow to stand out, so that I notice urgent work before it&#x27;s too late.</p>
 <details><summary>How we'll know it works (3 checks)</summary><ul class="checks"><li>Pending assignments due today or tomorrow (in the student&#x27;s time zone) show a &quot;Due soon&quot; label on the dashboard and the assignment list.</li><li>Completed assignments never show the label.</li><li>The label disappears once the due date has passed and the assignment becomes overdue (US-028).</li></ul>
 <p class="oos"><strong>Not included:</strong> Configurable warning windows.</p></details>
-<div class="question" data-rec="US-027" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Due dates have no time of day, so &quot;within 24 hours&quot; is approximated as &quot;due today or tomorrow&quot;. Is that acceptable?</p>
+<div class="question resolved" data-rec="US-027" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: &quot;Due soon&quot; means due today or tomorrow in the student&#x27;s time zone.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Yes. Without due times, &quot;due today or tomorrow&quot; is the clearest rule.</p><p class="rec-why">It matches how students read deadlines and needs no extra data.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: &quot;Due soon&quot; means due today or tomorrow in the student&#x27;s time zone.</li></ul><button type="button" class="accept" data-accept="US-027" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: &quot;Due soon&quot; means due today or tomorrow in the student&#x27;s time zone.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-020">ADR-020</a></p>
 <div class="review" data-id="US-027">
@@ -881,8 +881,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-028" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-028</span><h3>Flag overdue assignments</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-028">Not reviewed</span></header>
+<article class="card" id="US-028" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-028</span><h3>Flag overdue assignments</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-028">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya missed a deadline. That assignment shows &quot;Overdue&quot; until she completes it.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The &quot;overdue&quot; stamp on a library book you forgot to return.</p></div>
@@ -904,8 +904,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-029" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-029</span><h3>See in-app deadline reminders</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-029">Not reviewed</span></header>
+<article class="card" id="US-029" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-029</span><h3>See in-app deadline reminders</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-029">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>A small bell in the header shows &quot;2&quot;. Tapping it lists the two assignments that need her attention.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A notice board at the college gate that you see every time you walk in. It won&#x27;t phone you at home.</p></div>
@@ -914,11 +914,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want reminders inside the app for assignments that are due soon or overdue, so that I&#x27;m reminded every time I open CampusMate.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>A notification indicator in the header shows the number of pending assignments that are due soon or overdue.</li><li>Opening it lists those assignments, each linking to its detail.</li><li>The count updates as soon as an assignment is completed.</li><li>No emails or push notifications are sent.</li></ul>
 <p class="oos"><strong>Not included:</strong> Email, SMS and push notifications.</p></details>
-<div class="question" data-rec="US-029" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Is in-app reminding enough for the guide, or are email reminders expected?</p>
+<div class="question resolved" data-rec="US-029" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Reminders are in-app only; email reminders are Future Scope.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>In-app reminders only for this version, as ADR-019 proposes. Email reminders go to Future Scope.</p><p class="rec-why">Free hosting can&#x27;t run a reliable scheduler for emails.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Reminders are in-app only; email reminders are Future Scope.</li></ul><button type="button" class="accept" data-accept="US-029" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Reminders are in-app only; email reminders are Future Scope.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-019">ADR-019</a></p>
 <div class="review" data-id="US-029">
@@ -931,8 +931,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-029" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-attendance"><div class="area-head"><span class="scene-no">Scene 7</span><h2>Attendance</h2><p>Knowing about a shortfall while there is still time to fix it.</p></div><article class="card" id="US-030" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-030</span><h3>Log class attendance</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-030">Not reviewed</span></header>
+</article></section><section class="area" id="area-attendance"><div class="area-head"><span class="scene-no">Scene 7</span><h2>Attendance</h2><p>Knowing about a shortfall while there is still time to fix it.</p></div><article class="card" id="US-030" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-030</span><h3>Log class attendance</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-030">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>After class Priya marks herself present. Networks shows 17 of 24: 70.8%.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The teacher&#x27;s attendance register, but in your pocket.</p></div>
@@ -954,8 +954,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-031" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-031</span><h3>Correct an attendance entry</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-031">Not reviewed</span></header>
+<article class="card" id="US-031" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-031</span><h3>Correct an attendance entry</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-031">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya accidentally marked last Monday absent. She opens the history and changes it to present.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Rubbing out a pencil mistake in the register.</p></div>
@@ -977,8 +977,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-032" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-032</span><h3>See how many classes I can miss</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-032">Not reviewed</span></header>
+<article class="card" id="US-032" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-032</span><h3>See how many classes I can miss</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-032">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>DBMS says &quot;You can miss 2 more classes&quot;. Networks says &quot;Attend the next 4 classes&quot;.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Like a phone battery that says &quot;3 hours left&quot; instead of just &quot;62%&quot;.</p></div>
@@ -1000,8 +1000,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-033" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-033</span><h3>Get attendance warnings before it&#x27;s too late</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-033">Not reviewed</span></header>
+<article class="card" id="US-033" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-033</span><h3>Get attendance warnings before it&#x27;s too late</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-033">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>DBMS is at exactly 75% (18 of 24), but CampusMate shows &quot;At risk&quot;, because one more absence would drop it to 72%.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The fuel light that comes on before the tank is empty, not after.</p></div>
@@ -1010,11 +1010,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want a warning when my attendance is below 75% or when one more absence would take it there, so that I can act while there&#x27;s still time.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>A subject below 75% shows a &quot;Below 75%&quot; warning on the dashboard and attendance screen.</li><li>A subject at or above 75% where one more absence would drop it below shows an &quot;At risk&quot; warning; for example, 18 of 24 is at risk because 18 of 25 is 72%.</li><li>The two warnings look different and each has a text label.</li><li>Once a class timetable exists (US-007), an at-risk subject shows the date of its next class.</li></ul>
 <p class="oos"><strong>Not included:</strong> Warnings outside the app.</p></details>
-<div class="question" data-rec="US-033" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>The synopsis says to warn when the next absence would drop below 75%, but TC-05 expects no warning at 18 of 24. Should TC-05 be updated to expect an &quot;At risk&quot; warning?</p>
+<div class="question resolved" data-rec="US-033" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: TC-05 in the synopsis is updated to expect an &quot;At risk&quot; warning at 18 of 24.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Yes. Update TC-05 in the synopsis to expect an &quot;At risk&quot; warning at 18 of 24.</p><p class="rec-why">Warning before a shortfall is this feature&#x27;s main promise, and at 18 of 24 one more absence drops the student to 72%.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: TC-05 in the synopsis is updated to expect an &quot;At risk&quot; warning at 18 of 24.</li></ul><button type="button" class="accept" data-accept="US-033" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: TC-05 in the synopsis is updated to expect an &quot;At risk&quot; warning at 18 of 24.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-013">ADR-013</a> <a class="ref" href="#ADR-020">ADR-020</a></p>
 <div class="review" data-id="US-033">
@@ -1027,8 +1027,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-033" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-rewards"><div class="area-head"><span class="scene-no">Scene 8</span><h2>Rewards</h2><p>Small rewards that make studying every day feel worth it.</p></div><article class="card" id="US-034" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-034</span><h3>Earn XP for study activity</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-034">Not reviewed</span></header>
+</article></section><section class="area" id="area-rewards"><div class="area-head"><span class="scene-no">Scene 8</span><h2>Rewards</h2><p>Small rewards that make studying every day feel worth it.</p></div><article class="card" id="US-034" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-034</span><h3>Earn XP for study activity</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-034">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Every finished assignment gives Priya 20 XP and every finished study session 10 XP.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Points on a supermarket loyalty card for every purchase.</p></div>
@@ -1037,11 +1037,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want to earn XP when I complete assignments and study sessions, so that I feel rewarded for steady work.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Completing an assignment awards 20 XP and completing a study session awards 10 XP.</li><li>The XP total on the dashboard and profile updates straight after the action.</li><li>Each assignment or session awards XP at most once, even if reopened and completed again.</li><li>Reopening a completed item doesn&#x27;t remove XP.</li></ul>
 <p class="oos"><strong>Not included:</strong> Spending XP, and XP for uploading notes or logging attendance.</p></details>
-<div class="question" data-rec="US-034" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Are 20 and 10 XP the right values? Should passing a quiz also award XP?</p>
+<div class="question resolved" data-rec="US-034" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: 20 XP per completed assignment, 10 XP per completed study session, none for quizzes.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Keep 20 XP per assignment and 10 XP per study session, with no XP for quizzes (see US-019).</p><p class="rec-why">Assignments take more effort than one session, and the round numbers are easy to explain.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: 20 XP per completed assignment, 10 XP per completed study session, none for quizzes.</li></ul><button type="button" class="accept" data-accept="US-034" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: 20 XP per completed assignment, 10 XP per completed study session, none for quizzes.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-021">ADR-021</a></p>
 <div class="review" data-id="US-034">
@@ -1055,8 +1055,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-035" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-035</span><h3>Keep a daily study streak</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-035">Not reviewed</span></header>
+<article class="card" id="US-035" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-035</span><h3>Keep a daily study streak</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-035">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya has studied 5 days in a row. If she skips a whole day, the count goes back to 0.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A daily watering chart for a plant: miss a day and you start counting again.</p></div>
@@ -1065,11 +1065,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want a streak that counts consecutive days of study activity, so that I&#x27;m motivated not to break the chain.</p>
 <details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Completing an assignment or a study session counts as activity for that day in the student&#x27;s time zone.</li><li>The first activity on a day after an active previous day increases the streak by 1; more activity on the same day doesn&#x27;t increase it again.</li><li>If a whole day passes without activity, the streak shows 0 until the next activity starts a new streak at 1.</li><li>The current streak appears on the dashboard and profile.</li></ul>
 <p class="oos"><strong>Not included:</strong> Streak freezes or repairs, and a longest-streak record.</p></details>
-<div class="question" data-rec="US-035" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should logging attendance or taking a quiz also count as activity?</p>
+<div class="question resolved" data-rec="US-035" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Only completing an assignment or a study session counts towards the streak.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>No. Only completing an assignment or a study session counts as activity.</p><p class="rec-why">The streak should measure studying, not record-keeping.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Only completing an assignment or a study session counts towards the streak.</li></ul><button type="button" class="accept" data-accept="US-035" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Only completing an assignment or a study session counts towards the streak.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-020">ADR-020</a> <a class="ref" href="#ADR-021">ADR-021</a></p>
 <div class="review" data-id="US-035">
@@ -1083,21 +1083,21 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-036" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-036</span><h3>Unlock badges</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-036">Not reviewed</span></header>
+<article class="card" id="US-036" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-036</span><h3>Unlock badges</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-036">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>On day 7 of her streak, a message pops up: &quot;Badge unlocked: 7-Day Streak&quot;.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Scout badges sewn onto a sash, one for each milestone.</p></div>
   <div class="why"><span class="kicker">Why it's needed</span><p>Badges give medium-term goals that XP alone doesn&#x27;t. The synopsis names only one example (a 7-day streak).</p></div>
 </div>
 <p class="formal">As a student, I want to unlock badges for milestones, so that I have goals beyond the daily routine.</p>
-<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Reaching a 7-day streak unlocks the &quot;7-Day Streak&quot; badge.</li><li>Each badge is earned at most once per student and stores the date it was earned.</li><li>When a badge unlocks, a short on-screen message names it.</li><li>The full badge list and the conditions for each are defined before this story is built.</li></ul>
+<details><summary>How we'll know it works (4 checks)</summary><ul class="checks"><li>Reaching a 7-day streak unlocks the &quot;7-Day Streak&quot; badge.</li><li>Each badge is earned at most once per student and stores the date it was earned.</li><li>When a badge unlocks, a short on-screen message names it.</li><li>The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz).</li></ul>
 <p class="oos"><strong>Not included:</strong> Badges awarded by teachers, and sharing badges.</p></details>
-<div class="question" data-rec="US-036" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Which badges beyond &quot;7-Day Streak&quot; should exist (for example first completed assignment, 10 assignments completed, a perfect quiz score)?</p>
+<div class="question resolved" data-rec="US-036" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Four badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.</p><p class="rec-why">Four badges cover a first win, consistency, workload and mastery without much extra code.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Changes the check to: The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz).</li><li>Closes the question as: Badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.</li></ul><button type="button" class="accept" data-accept="US-036" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Changes the check to: The badges are: First Step (first completed assignment or study session), 7-Day Streak (streak reaches 7), Assignment Ace (10 assignments completed) and Perfect Score (every question right on a quiz).</li><li>Closes the question as: Badges: First Step, 7-Day Streak, Assignment Ace and Perfect Score.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-009">ADR-009</a></p>
 <div class="review" data-id="US-036">
@@ -1111,8 +1111,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-037" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-037</span><h3>See my level</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-037">Not reviewed</span></header>
+<article class="card" id="US-037" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-037</span><h3>See my level</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-037">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>With 240 XP Priya is level 3, and the bar shows 40 of 100 XP to level 4.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Belt colours in karate.</p></div>
@@ -1121,11 +1121,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want a level based on my total XP, so that I can see my long-term progress at a glance.</p>
 <details><summary>How we'll know it works (3 checks)</summary><ul class="checks"><li>Level = floor(XP / 100) + 1, so 0–99 XP is level 1 and 100–199 XP is level 2.</li><li>The profile and dashboard show the current level.</li><li>Progress towards the next level is shown, for example &quot;40 / 100 XP&quot;.</li></ul>
 <p class="oos"><strong>Not included:</strong> Rewards for reaching a level.</p></details>
-<div class="question" data-rec="US-037" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Is a flat 100 XP per level right, or should each level need more XP than the last?</p>
+<div class="question resolved" data-rec="US-037" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Each level needs 100 XP.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Yes, a flat 100 XP per level.</p><p class="rec-why">It&#x27;s easy to explain to students and to test.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Each level needs 100 XP.</li></ul><button type="button" class="accept" data-accept="US-037" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Each level needs 100 XP.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-021">ADR-021</a></p>
 <div class="review" data-id="US-037">
@@ -1139,8 +1139,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-038" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-038</span><h3>View profile and rewards</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-038">Not reviewed</span></header>
+<article class="card" id="US-038" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-038</span><h3>View profile and rewards</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-038">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Priya&#x27;s profile shows her XP, level, streak and every badge she has earned, with the dates. Locked badges show what she needs to do.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A trophy shelf, with empty spaces labelled for the trophies still to win.</p></div>
@@ -1161,8 +1161,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-038" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-reports"><div class="area-head"><span class="scene-no">Scene 9</span><h2>Reports</h2><p>Looking back at the week, and having something to show the guide.</p></div><article class="card" id="US-039" data-kind="story" data-q="1" data-repo="draft">
-<header class="card-head"><span class="id">US-039</span><h3>View weekly productivity report</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-039">Not reviewed</span></header>
+</article></section><section class="area" id="area-reports"><div class="area-head"><span class="scene-no">Scene 9</span><h2>Reports</h2><p>Looking back at the week, and having something to show the guide.</p></div><article class="card" id="US-039" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-039</span><h3>View weekly productivity report</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-039">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Sunday evening, Priya opens the weekly report: 6 h 30 min studied, 3 of 4 assignments done.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The weekly summary in a fitness app, but for studying.</p></div>
@@ -1171,11 +1171,11 @@ footer { color: var(--muted); font-size: 14px; }
 <p class="formal">As a student, I want a weekly report of my study time and assignment completion, so that I can see whether I&#x27;m keeping up.</p>
 <details><summary>How we'll know it works (5 checks)</summary><ul class="checks"><li>The student can pick a week (Monday to Sunday); the current week is the default.</li><li>The report shows, per subject, total minutes of completed sessions and the number of sessions completed out of planned.</li><li>The report shows how many assignments were due that week and what percentage were completed.</li><li>The figures match the underlying records exactly (checked against a test data set).</li><li>The report can be downloaded as CSV and printed from the browser.</li></ul>
 <p class="oos"><strong>Not included:</strong> Focus time (no timer exists), and trends across several weeks.</p></details>
-<div class="question" data-rec="US-039" data-rec-applied="0">
-  <span class="kicker">Open question</span>
-  <p>Should &quot;focus time&quot; be removed from synopsis §5.5, since nothing records it?</p>
+<div class="question resolved" data-rec="US-039" data-rec-applied="1">
+  <span class="kicker">Question resolved</span>
+  <p>Resolved 2026-10-18: Focus time is removed from the report and from synopsis §5.5.</p>
   <div class="rec"><span class="kicker">Our recommendation</span><p>Yes. Remove focus time from §5.5 of the synopsis.</p><p class="rec-why">Nothing in the app records focus time, so the report can&#x27;t show it.</p>
-  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Focus time is removed from the report and from synopsis §5.5.</li></ul><button type="button" class="accept" data-accept="US-039" aria-pressed="false">Accept recommendation</button></div>
+  <p class="rec-if">If you accept, the story file changes like this:</p><ul><li>Closes the question as: Focus time is removed from the report and from synopsis §5.5.</li></ul><p class="applied">Accepted and applied to the story file.</p></div>
 </div>
 <p class="related">Related decisions: <a class="ref" href="#ADR-029">ADR-029</a></p>
 <div class="review" data-id="US-039">
@@ -1189,8 +1189,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-040" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-040</span><h3>View attendance report</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-040">Not reviewed</span></header>
+<article class="card" id="US-040" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-040</span><h3>View attendance report</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-040">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Before meeting her guide, Priya opens the attendance report: every subject, classes held, attended, percentage and status.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A report card for attendance.</p></div>
@@ -1212,8 +1212,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-041" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-041</span><h3>View assignment status report</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-041">Not reviewed</span></header>
+<article class="card" id="US-041" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-041</span><h3>View assignment status report</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-041">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>The assignment report shows DBMS: 3 completed, 1 overdue; Maths: 2 pending.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The teacher&#x27;s assignment register, sorted by subject.</p></div>
@@ -1235,8 +1235,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-042" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-042</span><h3>View notes summary log</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-042">Not reviewed</span></header>
+<article class="card" id="US-042" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-042</span><h3>View notes summary log</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-042">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Two weeks before exams, Priya opens the notes log and reads every summary in one list.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A revision folder of one-page cheat sheets.</p></div>
@@ -1257,8 +1257,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-US-042" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-everywhere"><div class="area-head"><span class="scene-no">Scene 10</span><h2>Everywhere in the app</h2><p>Promises that apply on every screen.</p></div><article class="card" id="US-043" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-043</span><h3>See only my own data</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-043">Not reviewed</span></header>
+</article></section><section class="area" id="area-everywhere"><div class="area-head"><span class="scene-no">Scene 10</span><h2>Everywhere in the app</h2><p>Promises that apply on every screen.</p></div><article class="card" id="US-043" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-043</span><h3>See only my own data</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-043">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>Rahul is also on CampusMate. Even if he guesses the web address of one of Priya&#x27;s notes, he gets &quot;not found&quot;.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Your bank shows only your account, even if you type someone else&#x27;s account number.</p></div>
@@ -1280,8 +1280,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card" id="US-044" data-kind="story" data-q="0" data-repo="draft">
-<header class="card-head"><span class="id">US-044</span><h3>Use CampusMate on a phone browser</h3><span class="pill repo draft">In repo: Draft</span><span class="state" data-state-for="US-044">Not reviewed</span></header>
+<article class="card" id="US-044" data-kind="story" data-q="0" data-repo="approved">
+<header class="card-head"><span class="id">US-044</span><h3>Use CampusMate on a phone browser</h3><span class="pill repo approved">In repo: Approved</span><span class="state" data-state-for="US-044">Not reviewed</span></header>
 <div class="scene"><span class="kicker">Priya's moment</span><p>In class, Priya logs attendance from her phone. Every screen fits without scrolling sideways.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A pocket diary and a desk diary with the same pages.</p></div>
@@ -1335,24 +1335,24 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-002" data-kind="adr" data-status="accepted" data-repo="accepted">
-<header class="card-head"><span class="id">ADR-002</span><h3>Angular with Angular Material for the front end</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-002">Not reviewed</span></header>
-<div class="scene"><span class="kicker">In plain words</span><p>Screens are built from Angular Material&#x27;s ready-made buttons, forms, tables and dialogs instead of designing each one from scratch.</p></div>
+<article class="card adr" id="ADR-002" data-kind="adr" data-status="proposed" data-repo="proposed">
+<header class="card-head"><span class="id">ADR-002</span><h3>Angular with Angular Material for the front end</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-002">Not reviewed</span></header>
+<div class="scene"><span class="kicker">In plain words</span><p>Screens are built from Angular Material&#x27;s ready-made buttons, forms and dialogs, then restyled with a bold CampusMate theme and smooth, playful animations so the app feels modern rather than stock.</p></div>
 <div class="pair">
-  <div class="analogy"><span class="kicker">Think of it like</span><p>Building furniture from a flat-pack kit rather than cutting raw wood.</p></div>
-  <div class="why"><span class="kicker">If you approve</span><p>You save weeks of design work, and the app looks like a standard Material app.</p></div>
+  <div class="analogy"><span class="kicker">Think of it like</span><p>Buying a well-built flat-pack wardrobe and then painting it, adding new handles and lights: sturdy inside, your own style outside.</p></div>
+  <div class="why"><span class="kicker">If you approve</span><p>You keep Material&#x27;s accessibility and save weeks of building; the custom look and animations add about 3–4 days in the polish week.</p></div>
 </div>
 <div class="tradeoff">
-  <div><span class="kicker good">You gain</span><ul><li>Ready-made dialogs, tables, date pickers and form validation.</li><li>Consistent look across all screens with little design work.</li></ul></div>
-  <div><span class="kicker bad">You accept</span><ul><li>The UI looks generic.</li><li>Angular major versions arrive every six months and may need upgrade work.</li></ul></div>
+  <div><span class="kicker good">You gain</span><ul><li>Ready-made dialogs, tables, date pickers and form validation.</li><li>A distinctive, animated look that students enjoy using, without giving up Material&#x27;s accessibility.</li></ul></div>
+  <div><span class="kicker bad">You accept</span><ul><li>Custom theming and animation add design and build time (about 3–4 days, inside the interface-polish week).</li><li>Most of the reference components are written for React, so effects must be rebuilt in Angular rather than copied.</li><li>Angular major versions arrive every six months and may need upgrade work.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The student is new to front-end frameworks and the schedule allows three weeks of learning (synopsis §9). Every screen needs forms, tables, dialogs and responsive layout. Hand-styling components would consume the time needed for the AI features.</p>
 <p><strong>Chosen:</strong> Angular + Angular Material. <strong>Also considered:</strong></p><ul><li>React + MUI</li><li>Plain HTML, CSS and JavaScript</li></ul>
 <p><strong>Why not the others:</strong> React is rejected because the synopsis commits to Angular and switching gains nothing for this project. Plain HTML is rejected because it would mean building routing and components by hand.</p>
 <p><strong>When to rethink:</strong> Reopen if the learning phase overruns by more than one week, or if an Angular Material release breaks a component the app depends on.</p>
-<p><strong>How we keep to it:</strong> PR review checklist: prefer a Material component before writing a custom one. ng lint runs in CI.</p></details>
+<p><strong>How we keep to it:</strong> PR review checklist: prefer a Material component before writing a custom one; colours, shapes and type come from the shared theme tokens; every animation is checked with reduced motion turned on; no React component code is copied in. ng lint runs in CI.</p></details>
 <p class="related">Stories it supports: <a class="ref" href="#US-044">US-044</a> · Related decisions: <a class="ref" href="#ADR-001">ADR-001</a></p>
 <div class="review" data-id="ADR-002">
   <div class="choices" role="group" aria-label="Decision for ADR-002">
@@ -1395,8 +1395,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-025" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-025</span><h3>REST API conventions</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-025">Not reviewed</span></header>
+<article class="card adr" id="ADR-025" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-025</span><h3>REST API conventions</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-025">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>All server addresses follow one pattern, /api/v1/subjects, /api/v1/notes and so on, and errors always look the same.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Standard house numbers on a street, so the postman always finds the right door.</p></div>
@@ -1406,7 +1406,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Client error handling is uniform.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Changing the conventions later means changing every route.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Angular and FastAPI are written by the same team, but inconsistent paths and errors make client code and tests harder and look messy in the report.</p>
 <p><strong>Chosen:</strong> Versioned REST with FastAPI&#x27;s error format. <strong>Also considered:</strong></p><ul><li>GraphQL</li><li>Ad hoc unversioned routes</li></ul>
@@ -1425,8 +1425,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-026" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-026</span><h3>Monorepo layout</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-026">Not reviewed</span></header>
+<article class="card adr" id="ADR-026" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-026</span><h3>Monorepo layout</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-026">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>One GitHub repository with three folders: frontend, backend and docs.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>One project binder with three tabbed sections instead of three separate binders.</p></div>
@@ -1436,7 +1436,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>One commit history supports the authenticity requirement (§11.2).</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Hosts must be configured with the right root folder.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The CampusMate GitHub repository will hold the front end, back end and documentation. Without an agreed layout, files land in ad hoc places and deployment configuration gets confused.</p>
 <p><strong>Chosen:</strong> Monorepo with frontend/, backend/, docs/. <strong>Also considered:</strong></p><ul><li>Separate repositories</li></ul>
@@ -1604,8 +1604,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-022" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-022</span><h3>Privacy controls for notes sent to AI models</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-022">Not reviewed</span></header>
+<article class="card adr" id="ADR-022" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-022</span><h3>Privacy controls for notes sent to AI models</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-022">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Only use AI providers that don&#x27;t keep or train on what&#x27;s sent, tell students their notes go to an outside AI, and never send names or emails.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Taking your notes to an outside print shop: you choose one that promises not to keep copies, and you tell the owner of the notes.</p></div>
@@ -1615,7 +1615,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Students know where their notes go.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>The free model list may shrink further.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Uploaded notes go to third-party models through OpenRouter, and some free model providers log or train on prompts. Students aren&#x27;t told this anywhere in the synopsis.</p>
 <p><strong>Chosen:</strong> Privacy settings, notice and text-only prompts. <strong>Also considered:</strong></p><ul><li>Any free model, no notice</li><li>Local model</li></ul>
@@ -1634,8 +1634,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-027" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-027</span><h3>Secrets and configuration through environment variables</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-027">Not reviewed</span></header>
+<article class="card adr" id="ADR-027" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-027</span><h3>Secrets and configuration through environment variables</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-027">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Passwords and keys live in environment settings that never go into GitHub; the repo holds only an example file.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Keeping your house key in your pocket, not under the doormat of a public building.</p></div>
@@ -1645,7 +1645,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>No secrets in the repository.</li><li>The app refuses to start when a required setting is missing.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Each host&#x27;s environment must be set up manually.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The app needs an OpenRouter key, Firebase service account, database URL and CORS origins. The repository is on GitHub, so any committed secret is exposed.</p>
 <p><strong>Chosen:</strong> Environment variables with pydantic-settings. <strong>Also considered:</strong></p><ul><li>Committed config file</li><li>Cloud secret manager</li></ul>
@@ -1663,8 +1663,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-ADR-027" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-data"><div class="area-head"><h2>Data and the database</h2><p>How information is stored, kept correct and removed.</p></div><article class="card adr" id="ADR-006" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-006</span><h3>Database engine: SQLite for development, PostgreSQL for deployment</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-006">Not reviewed</span></header>
+</article></section><section class="area" id="area-data"><div class="area-head"><h2>Data and the database</h2><p>How information is stored, kept correct and removed.</p></div><article class="card adr" id="ADR-006" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-006</span><h3>Database engine: SQLite for development, PostgreSQL for deployment</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-006">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Use the simple file-based SQLite on your laptop, and a free PostgreSQL database when the app is online.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Practise in a rough notebook at home, but keep the final records in the college office&#x27;s filing cabinet, because the free host clears its desks every night.</p></div>
@@ -1674,7 +1674,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Deployed data persists.</li><li>Local development needs no database server.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Bugs that appear only on PostgreSQL can slip through local testing.</li><li>SQLite needs foreign keys enabled explicitly (ADR-023).</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The synopsis lists SQLite with PostgreSQL as an &quot;alternative option&quot;, leaving the deployed database undecided. Free hosting platforms usually wipe their disk on each redeploy, which would delete a SQLite file and all student data.</p>
 <p><strong>Chosen:</strong> SQLite in development, PostgreSQL in deployment. <strong>Also considered:</strong></p><ul><li>SQLite everywhere</li><li>PostgreSQL everywhere (Docker locally)</li></ul>
@@ -1693,8 +1693,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-017" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-017</span><h3>SQLAlchemy ORM with Alembic migrations</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-017">Not reviewed</span></header>
+<article class="card adr" id="ADR-017" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-017</span><h3>SQLAlchemy ORM with Alembic migrations</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-017">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Talk to the database through SQLAlchemy and record every change to the table structure with Alembic.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A translator who speaks both SQLite and PostgreSQL, plus a logbook of every change to the building&#x27;s floor plan.</p></div>
@@ -1704,7 +1704,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>One codebase for both engines.</li><li>Migration history doubles as evidence of original work.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>ORM learning time.</li><li>Generated SQL is less visible than hand-written SQL.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> FastAPI has no database layer. The schema will change during development, and the same code must run on SQLite and PostgreSQL (ADR-006). Hand-edited schemas drift from the data dictionary.</p>
 <p><strong>Chosen:</strong> SQLAlchemy 2.0 + Alembic. <strong>Also considered:</strong></p><ul><li>SQLModel + Alembic</li><li>Raw SQL with database drivers</li></ul>
@@ -1753,8 +1753,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-009" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-009</span><h3>Earned badges stored in a UserBadge table</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-009">Not reviewed</span></header>
+<article class="card adr" id="ADR-009" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-009</span><h3>Earned badges stored in a UserBadge table</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-009">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Store each earned badge as its own row with the date earned, instead of a list squeezed into one column.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A proper register with one line per badge and date, rather than badge names scribbled in a margin.</p></div>
@@ -1764,7 +1764,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>The schema is fully normalised for badges.</li><li>The profile can show when each badge was earned.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>The synopsis ER diagram, data dictionary and §4.6 must be updated.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The synopsis stores badges as a JSON list in GamificationRecord.badges. That breaks first normal form, which an examiner may question in an RDBMS-category project, and it can&#x27;t record when a badge was earned.</p>
 <p><strong>Chosen:</strong> UserBadge table. <strong>Also considered:</strong></p><ul><li>JSON list column (as in the synopsis)</li></ul>
@@ -1813,8 +1813,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-014" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-014</span><h3>Note storage: extracted text in the database, original files optional</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-014">Not reviewed</span></header>
+<article class="card adr" id="ADR-014" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-014</span><h3>Note storage: extracted text in the database, original files optional</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-014">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>When a note is uploaded, keep its text in the database and throw the file away in the live app.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Photocopying the important pages into your register and returning the book, instead of renting a shelf for it.</p></div>
@@ -1824,7 +1824,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>No paid service is needed.</li><li>Regeneration doesn&#x27;t depend on the file.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Students can&#x27;t re-download the original file from the deployed app.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Note.file_url points to an uploaded file, but the synopsis never says where files live. Firebase Storage now requires the pay-as-you-go Blaze plan for new projects, and free back-end hosts wipe their disks on redeploy.</p>
 <p><strong>Chosen:</strong> Extracted text in the database; files optional. <strong>Also considered:</strong></p><ul><li>Firebase Storage</li><li>File bytes in a database BLOB column</li><li>Supabase Storage free tier</li></ul>
@@ -1843,8 +1843,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-023" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-023</span><h3>Cascade deletes for subjects and accounts</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-023">Not reviewed</span></header>
+<article class="card adr" id="ADR-023" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-023</span><h3>Cascade deletes for subjects and accounts</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-023">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Deleting a subject deletes everything inside it; deleting an account deletes everything. A confirmation shows exactly what will go.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Throwing away a folder throws away the pages inside it.</p></div>
@@ -1854,7 +1854,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>No orphaned data.</li><li>Account deletion meets privacy expectations.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>There is no undo.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Assignment, StudySession, Note and Attendance all reference Subject, but the synopsis doesn&#x27;t say what happens on delete. SQLite also ignores foreign keys unless they are turned on.</p>
 <p><strong>Chosen:</strong> Cascade delete with confirmation. <strong>Also considered:</strong></p><ul><li>Soft delete (deleted_at column)</li><li>Block delete while children exist</li></ul>
@@ -1873,8 +1873,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-020" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-020</span><h3>Time zones and the definition of a day</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-020">Not reviewed</span></header>
+<article class="card adr" id="ADR-020" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-020</span><h3>Time zones and the definition of a day</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-020">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Every student&#x27;s &quot;today&quot; is worked out in their own time zone, saved when they first sign in.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Indian train timetables are printed in IST even if the railway&#x27;s computers are abroad.</p></div>
@@ -1884,7 +1884,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Streaks and deadlines are right for every student.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>All date code must go through one helper, which is easy to forget.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Streaks, due dates, today&#x27;s classes, the daily suggestion and attendance all depend on what &quot;today&quot; is. A server in another region running on UTC would break streaks and mark assignments overdue early.</p>
 <p><strong>Chosen:</strong> UTC storage plus per-user time zone. <strong>Also considered:</strong></p><ul><li>Server local time</li><li>Client computes all dates</li></ul>
@@ -1903,8 +1903,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-021" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-021</span><h3>XP awarded through an XpEvent ledger</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-021">Not reviewed</span></header>
+<article class="card adr" id="ADR-021" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-021</span><h3>XP awarded through an XpEvent ledger</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-021">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Each XP award is written once in a ledger with a unique receipt number, so the same assignment can&#x27;t pay out twice.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A receipt book where each receipt number can only be used once.</p></div>
@@ -1914,7 +1914,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>XP can&#x27;t be awarded twice for the same item.</li><li>Activity history supports streak calculation.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Another table for the ER diagram and data dictionary.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> XP is awarded when an assignment or session is completed (§5.3). A student who completes, reopens and completes an item again would earn XP twice. The synopsis also doesn&#x27;t define what counts as streak activity.</p>
 <p><strong>Chosen:</strong> XpEvent ledger with unique constraint. <strong>Also considered:</strong></p><ul><li>xp_awarded flag on each assignment and session</li><li>No protection</li></ul>
@@ -1962,8 +1962,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-018" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-018</span><h3>AI request handling with timeout, validation and fallback</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-018">Not reviewed</span></header>
+<article class="card adr" id="ADR-018" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-018</span><h3>AI request handling with timeout, validation and fallback</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-018">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Every AI call waits at most 60 seconds, tries once more, then tries a backup model, checks the answer, and saves nothing unless it&#x27;s all good.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Ordering from a busy kitchen: wait a set time, ask again, try the kitchen next door, and inspect the dish before serving. Never serve half a plate.</p></div>
@@ -1973,7 +1973,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Every AI feature fails the same, predictable way.</li><li>No half-saved plans or quizzes.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Requests can take up to about two minutes in the worst case (timeout plus retry).</li><li>Fallback models may give lower-quality output.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Free AI models are slow, rate-limited and sometimes return malformed JSON. TC-08 requires a friendly error with no partial data saved. Without a common approach, each module would handle failures differently.</p>
 <p><strong>Chosen:</strong> Synchronous call with timeout, retry, fallback and validation. <strong>Also considered:</strong></p><ul><li>Background job queue (Celery or RQ with Redis)</li><li>Synchronous call with no safeguards</li></ul>
@@ -2052,8 +2052,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-015" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-015</span><h3>Text extraction from PDF and plain-text notes</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-015">Not reviewed</span></header>
+<article class="card adr" id="ADR-015" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-015</span><h3>Text extraction from PDF and plain-text notes</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-015">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Read text from typed PDFs and text files only. Scanned pages and handwriting are refused with a clear message, unless a free AI that can read images becomes available.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A scanner that reads printed pages perfectly but can&#x27;t read your handwriting.</p></div>
@@ -2063,7 +2063,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Core upload flow works on day one.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Students who photograph handwritten notes, a common case, can&#x27;t use AI Notes.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Notes can be typed PDFs, scanned PDFs, photos or handwriting (§10). Most free OpenRouter models are text-only, so images can&#x27;t simply be sent to the AI.</p>
 <p><strong>Chosen:</strong> pypdf for PDF plus plain text. <strong>Also considered:</strong></p><ul><li>Free vision model for images</li><li>Local OCR with Tesseract</li></ul>
@@ -2082,8 +2082,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-024" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-024</span><h3>Per-student daily limit on AI requests</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-024">Not reviewed</span></header>
+<article class="card adr" id="ADR-024" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-024</span><h3>Per-student daily limit on AI requests</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-024">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Each student can make up to 20 AI requests a day.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>The canteen gives each student 20 coupons a day, so the first in the queue can&#x27;t take all the food.</p></div>
@@ -2093,7 +2093,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>The shared quota is protected.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Students preparing for exams may hit the limit.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The free OpenRouter quota is shared by all students. One student repeatedly regenerating quizzes could use it up for everyone.</p>
 <p><strong>Chosen:</strong> Daily counter per student in the database. <strong>Also considered:</strong></p><ul><li>Per-minute rate limiting in memory (slowapi)</li><li>No limit</li></ul>
@@ -2111,8 +2111,8 @@ footer { color: var(--muted); font-size: 14px; }
   <textarea id="note-ADR-024" rows="2" placeholder="What should change, or why?"></textarea>
   <p class="saved" aria-live="polite"></p>
 </div>
-</article></section><section class="area" id="area-running"><div class="area-head"><h2>Running, testing and reporting</h2><p>Where the app lives, how it reminds students, and how we prove it works.</p></div><article class="card adr" id="ADR-016" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-016</span><h3>Hosting on Firebase Hosting, Render and Neon</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-016">Not reviewed</span></header>
+</article></section><section class="area" id="area-running"><div class="area-head"><h2>Running, testing and reporting</h2><p>Where the app lives, how it reminds students, and how we prove it works.</p></div><article class="card adr" id="ADR-016" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-016</span><h3>Hosting on Firebase Hosting, Render and Neon</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-016">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Screens are hosted on Firebase Hosting, the back end on Render, and the database on Neon, all on free plans.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Three free stalls at a college fair: posters at one, the counter at another, the storeroom at a third. The counter staff nap when it&#x27;s quiet, so the first visitor waits a minute.</p></div>
@@ -2122,7 +2122,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Zero hosting cost.</li><li>Each part can be redeployed independently.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>The first request after about 15 minutes idle can take up to a minute while the back end wakes.</li><li>Three accounts to manage.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The synopsis doesn&#x27;t say where the app runs, and it must be reachable by the evaluator at no cost. Without a decision, deployment is left to the last week, when free-tier surprises are hardest to fix.</p>
 <p><strong>Chosen:</strong> Firebase Hosting + Render + Neon. <strong>Also considered:</strong></p><ul><li>All on Render (static site, web service, Render PostgreSQL)</li><li>Single VPS</li></ul>
@@ -2141,8 +2141,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-019" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-019</span><h3>In-app deadline reminders</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-019">Not reviewed</span></header>
+<article class="card adr" id="ADR-019" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-019</span><h3>In-app deadline reminders</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-019">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Deadline reminders appear inside the app only: a bell and labels on the dashboard. No emails or phone notifications.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>A notice board at the college gate, not a phone call at home.</p></div>
@@ -2152,7 +2152,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Nothing extra to host or monitor.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Students who don&#x27;t open the app get no reminder.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The synopsis promises deadline reminders and &quot;queues of reminder events&quot; (§5.2) but no delivery mechanism. Email or push would need a scheduler and a mail or messaging service.</p>
 <p><strong>Chosen:</strong> In-app reminders computed on load. <strong>Also considered:</strong></p><ul><li>Email reminders via a scheduler (APScheduler + email service)</li><li>Web push via Firebase Cloud Messaging</li></ul>
@@ -2171,8 +2171,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-028" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-028</span><h3>Testing approach: pytest, Angular test runner and recorded AI responses</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-028">Not reviewed</span></header>
+<article class="card adr" id="ADR-028" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-028</span><h3>Testing approach: pytest, Angular test runner and recorded AI responses</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-028">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Automated tests use recorded AI answers instead of the real AI, and run on every push to GitHub.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Pilots practise in a flight simulator with recorded scenarios instead of real planes.</p></div>
@@ -2182,7 +2182,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Tests run in CI on every push.</li><li>Test results feed the report directly.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>A few live AI checks are still needed before submission.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> The final report needs unit, integration and system test reports (§5.4). Calling the real AI during tests would use up the free quota (§11.3) and make results unrepeatable.</p>
 <p><strong>Chosen:</strong> pytest + TestClient + recorded AI responses + Angular CLI runner. <strong>Also considered:</strong></p><ul><li>Tests against the live AI</li><li>Manual testing only</li></ul>
@@ -2201,8 +2201,8 @@ footer { color: var(--muted); font-size: 14px; }
   <p class="saved" aria-live="polite"></p>
 </div>
 </article>
-<article class="card adr" id="ADR-029" data-kind="adr" data-status="proposed" data-repo="proposed">
-<header class="card-head"><span class="id">ADR-029</span><h3>Reports computed on request with CSV export</h3><span class="pill repo proposed">In repo: Proposed</span><span class="state" data-state-for="ADR-029">Not reviewed</span></header>
+<article class="card adr" id="ADR-029" data-kind="adr" data-status="accepted" data-repo="accepted">
+<header class="card-head"><span class="id">ADR-029</span><h3>Reports computed on request with CSV export</h3><span class="pill repo accepted">In repo: Accepted</span><span class="state" data-state-for="ADR-029">Not reviewed</span></header>
 <div class="scene"><span class="kicker">In plain words</span><p>Reports are calculated fresh each time they&#x27;re opened, can be downloaded as CSV, and printed from the browser.</p></div>
 <div class="pair">
   <div class="analogy"><span class="kicker">Think of it like</span><p>Your bank calculating your balance when you check, instead of printing yesterday&#x27;s.</p></div>
@@ -2212,7 +2212,7 @@ footer { color: var(--muted); font-size: 14px; }
   <div><span class="kicker good">You gain</span><ul><li>Reports always match the live data.</li><li>Aggregate queries demonstrate SQL skills for the report.</li></ul></div>
   <div><span class="kicker bad">You accept</span><ul><li>Past weeks can&#x27;t be compared unless re-computed.</li><li>Printed output is only as good as the browser&#x27;s print styling.</li></ul></div>
 </div>
-<p class="adr-rec"><span class="kicker">Our recommendation (Needs your decision)</span>Approve. Option A is the best fit for a one-student, zero-cost project; what you give up is listed under “You accept”.</p>
+<p class="adr-rec"><span class="kicker">Our recommendation (Decided)</span>Approve, unless you want to change a choice the team has already made.</p>
 <details><summary>Full reasoning</summary>
 <p><strong>Why decide now:</strong> Section 5.5 lists four reports but no module, storage or export format. Precomputed reports can go stale; generating PDFs on the server adds libraries.</p>
 <p><strong>Chosen:</strong> On-request SQL aggregates, CSV and browser print. <strong>Also considered:</strong></p><ul><li>Precomputed snapshot tables</li><li>Server-side PDF generation (ReportLab or WeasyPrint)</li></ul>

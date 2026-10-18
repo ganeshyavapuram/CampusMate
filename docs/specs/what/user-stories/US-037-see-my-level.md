@@ -4,12 +4,12 @@ title: See my level
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-021]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-037 — See my level
@@ -43,8 +43,12 @@ Not built.
 
 ## Open questions
 
-Is a flat 100 XP per level right, or should each level need more XP than the last?
+Resolved 2026-10-18: Each level needs 100 XP.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Yes, a flat 100 XP per level.

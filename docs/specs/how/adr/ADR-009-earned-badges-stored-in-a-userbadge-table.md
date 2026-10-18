@@ -4,12 +4,12 @@ title: Earned badges stored in a UserBadge table
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-021, US-036, US-038]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # ADR-009 — Earned badges stored in a UserBadge table
@@ -73,3 +73,5 @@ _No amendments yet. Add each one as `### Amendment — YYYY-MM-DD: <what changed
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

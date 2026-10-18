@@ -4,12 +4,12 @@ title: Complete first-time setup
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-020]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-004 — Complete first-time setup
@@ -50,3 +50,5 @@ None.
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

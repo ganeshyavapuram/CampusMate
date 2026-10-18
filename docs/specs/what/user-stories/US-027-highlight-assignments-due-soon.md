@@ -4,12 +4,12 @@ title: Highlight assignments due soon
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-020]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-027 — Highlight assignments due soon
@@ -43,8 +43,12 @@ Not built.
 
 ## Open questions
 
-Due dates have no time of day, so "within 24 hours" is approximated as "due today or tomorrow". Is that acceptable?
+Resolved 2026-10-18: "Due soon" means due today or tomorrow in the student's time zone.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Yes. Without due times, "due today or tomorrow" is the clearest rule.

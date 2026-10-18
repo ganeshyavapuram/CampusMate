@@ -4,12 +4,12 @@ title: Generate an AI study timetable
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-005, ADR-010, ADR-018, ADR-024]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-010 — Generate an AI study timetable
@@ -35,6 +35,7 @@ Calendar apps know nothing about exams or weak subjects, so students either plan
 - [ ] No session for a subject is scheduled after that subject's exam date.
 - [ ] Every subject with a future exam date has at least one session.
 - [ ] If the AI response breaks any of these rules or the AI is unavailable, a clear error is shown and no sessions are saved (TC-08).
+- [ ] Each weak subject's total planned minutes are at least 1.5 times those of every non-weak subject whose exam date is the same or later.
 
 ## Out of scope
 
@@ -46,8 +47,12 @@ Not built.
 
 ## Open questions
 
-What measurable rule defines "more time for weak subjects" (for example, at least 1.5 times the minutes of a non-weak subject with the same exam date) so it can be tested?
+Resolved 2026-10-18: Weak subjects get at least 1.5 times the minutes of non-weak subjects with the same or a later exam date.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. Use a 1.5× rule: each weak subject gets at least 1.5 times the total minutes of every non-weak subject with the same or a later exam date.

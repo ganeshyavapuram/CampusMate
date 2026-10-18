@@ -4,12 +4,12 @@ title: Note storage: extracted text in the database, original files optional
 class: adr
 category: build
 facet: how
-status: proposed
+status: accepted
 decides: how
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-015, ADR-016, ADR-023, US-017, US-021]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # ADR-014 — Note storage: extracted text in the database, original files optional
@@ -83,3 +83,5 @@ _No amendments yet. Add each one as `### Amendment — YYYY-MM-DD: <what changed
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.

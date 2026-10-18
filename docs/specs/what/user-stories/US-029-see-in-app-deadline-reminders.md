@@ -4,12 +4,12 @@ title: See in-app deadline reminders
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-019]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-029 — See in-app deadline reminders
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Is in-app reminding enough for the guide, or are email reminders expected?
+Resolved 2026-10-18: Reminders are in-app only; email reminders are Future Scope.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. In-app reminders only for this version, as ADR-019 proposes. Email reminders go to Future Scope.

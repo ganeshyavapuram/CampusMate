@@ -25,7 +25,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 | TC-NOTE-03 | US-017 | System | PDF and plain-text files up to 10 MB are accepted. | | Not run |
 | TC-NOTE-04 | US-017 | Integration | After a successful upload the AI summary is shown, and reopening the note later shows the same summary without a new AI request. | | Not run |
 | TC-NOTE-05 | US-017 | System | A PDF with no extractable text is rejected with a message explaining it may be a scanned document. | | Not run |
-| TC-NOTE-06 | US-018 | System | Each successfully processed note has a quiz of 5 to 10 multiple-choice questions. | | Not run |
+| TC-NOTE-06 | US-018 | System | Each successfully processed note has a quiz of exactly 8 multiple-choice questions. | | Not run |
 | TC-NOTE-07 | US-018 | System | Every question has exactly four options and exactly one correct answer. | | Not run |
 | TC-NOTE-08 | US-018 | Integration | The quiz is saved with the note and shown again without a new AI request. | | Not run |
 | TC-NOTE-09 | US-018 | System | A quiz response that doesn't meet these rules is rejected and nothing is saved (US-016). | | Not run |

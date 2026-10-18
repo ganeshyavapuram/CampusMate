@@ -4,12 +4,12 @@ title: Generate a quiz from a note
 class: user-story
 category: build
 facet: what
-status: draft
+status: approved
 decides: what
 owner: Ganesh Yavapuram, Hemanjini Peddireddy
 provenance: team
 related: [ADR-008, ADR-018]
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # US-018 — Generate a quiz from a note
@@ -29,7 +29,7 @@ Self-testing is more effective than rereading, but writing questions takes time 
 
 ## Acceptance criteria
 
-- [ ] Each successfully processed note has a quiz of 5 to 10 multiple-choice questions.
+- [ ] Each successfully processed note has a quiz of exactly 8 multiple-choice questions.
 - [ ] Every question has exactly four options and exactly one correct answer.
 - [ ] The quiz is saved with the note and shown again without a new AI request.
 - [ ] A quiz response that doesn't meet these rules is rejected and nothing is saved (US-016).
@@ -44,8 +44,12 @@ Not built.
 
 ## Open questions
 
-Should the student choose the number of questions, or is a fixed number fine?
+Resolved 2026-10-18: Every quiz has exactly 8 questions.
 
 ## Discussion
 
 _No discussion yet. Add notes below with your name and the date._
+
+- **Review, 2026-10-18:** Approved.
+
+- **Review, 2026-10-18:** Recommendation accepted. A fixed 8 questions per quiz.

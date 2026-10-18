@@ -36,6 +36,15 @@ def load(path):
     return raw
 
 
+def format_note(note):
+    """First line inline; later lines indented under the entry, links as a sub-list."""
+    lines = [l.strip() for l in note.splitlines() if l.strip()]
+    if not lines:
+        return ""
+    rest = [f"  - <{l}>" if re.fullmatch(r"https?://\S+", l) else f"  {l}" for l in lines[1:]]
+    return "\n".join([lines[0]] + rest)
+
+
 def add_discussion(text, line):
     disc = specs.get_section(text, "Discussion")
     if line in disc:
@@ -82,7 +91,7 @@ def apply(item_id, review, date):
     log = []
     is_story = item_id.startswith("US-")
     decision = review.get("decision")
-    note = (review.get("note") or "").strip()
+    note = format_note(review.get("note") or "")
 
     if decision in WORDS:
         new_status = (US_MAP if is_story else ADR_MAP)[decision]
