@@ -1,3 +1,25 @@
+# OS and editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Python
 __pycache__/
 *.pyc
-.DS_Store
+.venv/
+.pytest_cache/
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+
+# Secrets and local data (ADR-027)
+.env
+*.db
+uploads/
+*service-account*.json
+
+# Local dev-server launcher for Claude (machine-specific paths)
+.claude/launch.json
