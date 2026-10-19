@@ -103,3 +103,4 @@ Never commit `backend/.env` or `campusmate.db`; both are in `.gitignore`.
 | [test-cases](test-cases/README.md) | Written test cases for each feature |
 | [docs/storyboard.html](docs/storyboard.html) | Plain-language storyboard of every story and decision |
 | [backend/README.md](backend/README.md) | Back-end details: migrations and tests |
+| [frontend/campusmate-web/README.md](frontend/campusmate-web/README.md) | Front-end details: API address, folder layout and tests |

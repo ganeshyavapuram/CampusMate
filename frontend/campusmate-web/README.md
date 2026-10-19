@@ -1,59 +1,81 @@
-# CampusmateWeb
+# CampusMate front end
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.27.
+Angular 21 app with Angular Material, laid out as described in [docs/folder-structure.md](../../docs/folder-structure.md) (ADR-031).
 
-## Development server
+## First-time setup
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+You need Node.js 20.19+, 22.12+ or 24+ (`node --version`).
 
 ```bash
-ng generate component component-name
+cd frontend/campusmate-web
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Run
+
+The back end must be running too (see [backend/README.md](../../backend/README.md)).
 
 ```bash
-ng generate --help
+npx ng serve
 ```
 
-## Building
+Open <http://localhost:4200>. The page should say **Back end status: ok**. The page reloads by itself when you save a file.
 
-To build the project run:
+## Where the API address comes from
+
+| File | Used by | API address |
+|---|---|---|
+| `src/environments/environment.development.ts` | `ng serve` | `http://127.0.0.1:8001/api/v1` |
+| `src/environments/environment.ts` | `ng build` (production) | `/api/v1`, set at deployment (DEP-01) |
+
+If your back end runs on another port, change `apiBaseUrl` in `environment.development.ts`.
+
+## Tests
 
 ```bash
-ng build
+npx ng test --watch=false
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Tests use Vitest and fake the back end with `HttpTestingController`, so the back end doesn't need to be running.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Build
 
 ```bash
-ng test
+npx ng build
 ```
 
-## Running end-to-end tests
+The output goes to `dist/campusmate-web/`.
 
-For end-to-end (e2e) testing, run:
+## Folder layout
+
+```
+src/app/
+├── app.ts, app.html, app.config.ts   # root component and app-wide providers
+├── routes/app.routes.ts              # top-level routes; each feature is lazy-loaded
+├── core/                             # app-wide singletons, loaded once
+│   └── http/api.service.ts           # base URL and the health check
+├── shared/                           # reusable pieces that know nothing about any feature
+└── features/<feature>/               # one folder per feature: pages, components, services, models
+```
+
+Rules (ADR-031):
+
+1. Features don't import other features.
+2. `core/` and `shared/` never import from `features/`.
+3. If two features need the same thing, move it to `shared/`.
+
+## Adding something
 
 ```bash
-ng e2e
+npx ng generate component features/subjects/pages/subjects-list
+npx ng generate service features/subjects/services/subjects
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Troubleshooting
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Problem | Fix |
+|---|---|
+| **Back end status: unreachable** | Start the back end, or make `apiBaseUrl` match its port. |
+| `The Angular CLI requires a minimum Node.js version` | Update Node.js to a version listed above. |
+| A Material component shows up unstyled | Import its module (for example `MatButtonModule`) in the component's `imports`. |
+| `Port 4200 is already in use` | Stop the other `ng serve`, or run `npx ng serve --port 4300`. |
