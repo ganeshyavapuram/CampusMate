@@ -23,3 +23,4 @@ uploads/
 
 # Local dev-server launcher for Claude (machine-specific paths)
 .claude/launch.json
+package-lock.json
