@@ -16,7 +16,7 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 
 | ID | Story | Level | Expected result | Actual result | Status |
 |---|---|---|---|---|---|
-| TC-AUTH-01 | US-001 | System | The login screen shows a "Sign in with Google" button and a one-paragraph introduction to CampusMate. | | Not run |
+| TC-AUTH-01 | US-001 | System | The login screen shows a "Sign in with Google" button and a one-paragraph introduction to CampusMate. | Login screen renders centered card with title, introduction, and "Sign in with Google" button | Pass |
 | TC-AUTH-02 | US-001 | System | After a successful Google sign-in the student is taken to the dashboard (or to first-time setup, US-004, if they have no subjects). | | Not run |
 | TC-AUTH-03 | US-001 | System | On a student's first sign-in exactly one User record and one GamificationRecord are created; signing in again creates no new records. | | Not run |
 | TC-AUTH-04 | US-001 | Integration | A request to any protected API endpoint without a valid Firebase ID token returns HTTP 401 and no data (TC-01). | | Not run |
@@ -35,4 +35,4 @@ Each case is one acceptance criterion from a user story. Fill in **Actual result
 
 | Date | Build or commit | Run by | Cases run | Passed | Failed | Notes |
 |---|---|---|---|---|---|---|
-| | | | | | | |
+| 2026-11-01 | feature/auth-02 | Ganesh Yavapuram | 1 | 1 | 0 | TC-AUTH-01 verified via unit tests |
