@@ -44,6 +44,12 @@ export class AuthService {
     return auth.currentUser !== null;
   }
 
+  /** The signed-in student's Firebase ID token, or null when signed out. Firebase refreshes it when it expires. */
+  async getIdToken(): Promise<string | null> {
+    await auth.authStateReady();
+    return auth.currentUser ? auth.currentUser.getIdToken() : null;
+  }
+
   signOut(): Promise<void> {
     return signOut(auth);
   }
