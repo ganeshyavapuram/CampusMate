@@ -1,0 +1,16 @@
+.shell-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--mat-sys-surface-container, #eceef4);
+  border-bottom: 1px solid var(--mat-sys-outline-variant, #c4c6d0);
+}
+
+.app-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
