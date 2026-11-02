@@ -1,24 +1,10 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import { ApiService } from './core/http/api.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatButtonModule],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
-  private readonly api = inject(ApiService);
-
-  protected readonly backendStatus = signal('checking…');
-
-  ngOnInit(): void {
-    this.api.health().subscribe({
-      next: (res) => this.backendStatus.set(res.status),
-      error: () => this.backendStatus.set('unreachable'),
-    });
-  }
-}
+export class App {}
