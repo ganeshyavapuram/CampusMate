@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GoogleAuthProvider, UserCredential, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, UserCredential, signInWithPopup, signOut } from 'firebase/auth';
 
 import { auth } from '../firebase/firebase.config';
 
@@ -33,6 +33,19 @@ export class AuthService {
       }
       throw err;
     }
+  }
+
+  /**
+   * Whether a student is signed in. Waits for Firebase to restore the saved session first,
+   * so a page refresh doesn't look like a signed-out visit.
+   */
+  async isSignedIn(): Promise<boolean> {
+    await auth.authStateReady();
+    return auth.currentUser !== null;
+  }
+
+  signOut(): Promise<void> {
+    return signOut(auth);
   }
 
   protected openGooglePopup(): Promise<UserCredential> {
